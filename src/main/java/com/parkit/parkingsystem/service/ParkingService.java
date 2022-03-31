@@ -18,8 +18,6 @@ public class ParkingService {
 
     private static final Logger logger = LogManager.getLogger("ParkingService");
 
-    private static final FareCalculatorService fareCalculatorService = new FareCalculatorService();
-
     private final InputReaderUtil inputReaderUtil;
     private final ParkingSpotDAO parkingSpotDAO;
     private final TicketDAO ticketDAO;
@@ -41,14 +39,14 @@ public class ParkingService {
                 Date inTime = new Date();
                 Ticket ticket = new Ticket();
                 //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-                //ticket.setId(ticketID);
+                ticket.setId(1);
                 ticket.setParkingSpot(parkingSpot);
                 ticket.setVehicleRegNumber(vehicleRegNumber);
                 ticket.setPrice(0);
                 ticket.setInTime(inTime);
                 ticket.setOutTime(null);
                 ticketDAO.saveTicket(ticket);
-                logger.info("Generated Ticket and saved in DB");
+                System.out.println("Generated Ticket and saved in DB");
                 System.out.println("Please park your vehicle in spot number:" + parkingSpot.getId());
                 System.out.println("Recorded in-time for vehicle number:" + vehicleRegNumber + " is:" + inTime);
             }
@@ -97,6 +95,7 @@ public class ParkingService {
                 logger.error("Incorrect input provided");
                 throw new IllegalArgumentException("Entered input is invalid");
             }
+
         }
     }
 
@@ -110,6 +109,7 @@ public class ParkingService {
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
             Date outTime = new Date();
             ticket.setOutTime(outTime);
+            FareCalculatorService fareCalculatorService=new FareCalculatorService();
             fareCalculatorService.calculateFare(ticket);
             if(ticketDAO.updateTicket(ticket)) {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();

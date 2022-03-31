@@ -2,6 +2,8 @@ package com.parkit.parkingsystem;
 
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.constants.ParkingType;
+import com.parkit.parkingsystem.dao.TicketDAO;
+import com.parkit.parkingsystem.integration.config.DataBaseTestConfig;
 import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.service.FareCalculatorService;
@@ -9,6 +11,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 import java.util.Date;
 
@@ -17,11 +20,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FareCalculatorServiceTest {
 
+    private static final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private static FareCalculatorService fareCalculatorService;
     private Ticket ticket;
 
     @BeforeAll
     private static void setUp() {
+        TicketDAO ticketDAO = new TicketDAO();
+        ticketDAO.dataBaseConfig = dataBaseTestConfig;
         fareCalculatorService = new FareCalculatorService();
     }
 
@@ -208,34 +214,7 @@ public class FareCalculatorServiceTest {
         fareCalculatorService.calculateFare(ticket);
         assertEquals((0 * Fare.BIKE_RATE_PER_HOUR), ticket.getPrice());
     }
-    @Test
-    @DisplayName("Test for car more than 30 minutes")
-    void calculateFareCarWithMoreThan30MinutesParkingTime() {
-        Date inTime = new Date();
-        inTime.setTime(System.currentTimeMillis() - ( 30 * 60 * 1000));
-        Date outTime = new Date();
-        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
 
-        ticket.setInTime(inTime);
-        ticket.setOutTime(outTime);
-        ticket.setParkingSpot(parkingSpot);
-        fareCalculatorService.calculateFare(ticket);
-        assertEquals((0.5 * Fare.CAR_RATE_PER_HOUR), ticket.getPrice());
-    }
-    @Test
-    @DisplayName("Test for bike more than 30 minutes")
-    void calculateFareBikeWithMoreThan30MinutesParkingTime() {
-        Date inTime = new Date();
-        inTime.setTime(System.currentTimeMillis() - ( 30 * 60 * 1000));
-        Date outTime = new Date();
-        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE, false);
-
-        ticket.setInTime(inTime);
-        ticket.setOutTime(outTime);
-        ticket.setParkingSpot(parkingSpot);
-        fareCalculatorService.calculateFare(ticket);
-        assertEquals((0.5 * Fare.BIKE_RATE_PER_HOUR), ticket.getPrice());
-    }
     @Test
     @DisplayName("Test with discount for car")
     public void calculateFareCarWithRegularCustomer() {

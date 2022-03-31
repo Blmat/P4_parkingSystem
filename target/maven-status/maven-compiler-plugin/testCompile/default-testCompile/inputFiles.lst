@@ -1,6 +1,11 @@
-C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\oc-testing-java-cours\parkingsystem\src\test\java\com\parkit\parkingsystem\integration\service\DataBasePrepareService.java
-C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\oc-testing-java-cours\parkingsystem\src\test\java\com\parkit\parkingsystem\integration\ParkingDataBaseITBike.java
-C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\oc-testing-java-cours\parkingsystem\src\test\java\com\parkit\parkingsystem\ParkingServiceTest.java
-C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\oc-testing-java-cours\parkingsystem\src\test\java\com\parkit\parkingsystem\integration\config\DataBaseTestConfig.java
-C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\oc-testing-java-cours\parkingsystem\src\test\java\com\parkit\parkingsystem\FareCalculatorServiceTest.java
-C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\oc-testing-java-cours\parkingsystem\src\test\java\com\parkit\parkingsystem\integration\ParkingDataBaseITCar.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\ParkingServiceExitCarTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\service\ParkingServiceExitBikeTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\service\ParkingServiceIncomingBikeTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\FareCalculatorServiceTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\integration\config\DataBaseTestConfig.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\service\ParkingServiceIncomingCarTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\dao\TicketDAOTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\integration\ParkingServiceTestBikeDAO.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\integration\ParkingServicetestCarDAO.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\dao\ParkingSpotDAOTest.java
+C:\Users\mathieu\Desktop\Formation Opencalssroom\Projet 4\P4_parkingSystem\src\test\java\com\parkit\parkingsystem\integration\service\DataBasePrepareService.java
