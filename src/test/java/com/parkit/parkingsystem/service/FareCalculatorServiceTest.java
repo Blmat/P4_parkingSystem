@@ -30,7 +30,6 @@ public class FareCalculatorServiceTest {
         ticketDAO.dataBaseConfig = dataBaseTestConfig;
         fareCalculatorService = new FareCalculatorService();
     }
-
     @BeforeEach
     private void setUpPerTest() {
         ticket = new Ticket();
