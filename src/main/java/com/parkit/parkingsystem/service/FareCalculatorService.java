@@ -15,7 +15,7 @@ public class FareCalculatorService {
 
         Duration duration = Duration.between(ticket.getInTime().toInstant(),
                 ticket.getOutTime().toInstant());
-
+        //Gratuit si moins de 30mins
         if (duration.toMinutes() < 30) {
             ticket.setPrice(0f);
         } else {
@@ -36,7 +36,7 @@ public class FareCalculatorService {
     }
     public void discountForRegularCustomer(Ticket ticket,double discount) {
         calculateFare(ticket);
-        ticket.setPrice(ticket.getPrice()* (1-Math.ceil(discount)/100));
+        ticket.setPrice(ticket.getPrice()* Math.ceil(discount));
 
     }
 }

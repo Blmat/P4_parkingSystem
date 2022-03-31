@@ -15,7 +15,7 @@ import java.time.Duration;
 
 <span class="fc" id="L16">        Duration duration = Duration.between(ticket.getInTime().toInstant(),</span>
 <span class="fc" id="L17">                ticket.getOutTime().toInstant());</span>
-
+        //Gratuit si moins de 30mins
 <span class="fc bfc" id="L19" title="All 2 branches covered.">        if (duration.toMinutes() &lt; 30) {</span>
 <span class="fc" id="L20">            ticket.setPrice(0f);</span>
         } else {
@@ -36,7 +36,7 @@ import java.time.Duration;
 <span class="fc" id="L36">    }</span>
     public void discountForRegularCustomer(Ticket ticket,double discount) {
 <span class="fc" id="L38">        calculateFare(ticket);</span>
-<span class="fc" id="L39">        ticket.setPrice(ticket.getPrice()* (1-Math.ceil(discount)/100));</span>
+<span class="fc" id="L39">        ticket.setPrice(ticket.getPrice()* Math.ceil(discount));</span>
 
 <span class="fc" id="L41">    }</span>
 }

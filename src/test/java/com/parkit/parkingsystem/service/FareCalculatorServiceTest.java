@@ -227,8 +227,8 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         fareCalculatorService.discountForRegularCustomer(ticket, Fare.DISCOUNT_FOR_REGULAR_CUSTOMER);
 
-        assertEquals((int)  (ticket.getPrice() * 100) / 100,
-                (int) (24 * Fare.CAR_RATE_PER_HOUR * 0.95 * 100) / 100);
+        assertEquals((int)  (ticket.getPrice()),
+                (int) (24 * Fare.CAR_RATE_PER_HOUR ));
     }
     @Test
     @DisplayName("Test with discount for bike")
@@ -243,7 +243,7 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         fareCalculatorService.discountForRegularCustomer(ticket,Fare.DISCOUNT_FOR_REGULAR_CUSTOMER);
 
-        assertEquals((int) (ticket.getPrice() * 100) / 100,
-                (int) (24 * Fare.BIKE_RATE_PER_HOUR * 0.95 * 100) / 100);
+        assertEquals((int) (ticket.getPrice()),
+                (int) (24 * Fare.BIKE_RATE_PER_HOUR));
     }
 }
