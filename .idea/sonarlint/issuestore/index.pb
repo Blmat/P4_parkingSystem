@@ -1,7 +1,23 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-m
-=src/main/java/com/parkit/parkingsystem/model/ParkingSpot.java,3\1\318986ef301ad062e600ed154b628f156483e6f7
-Ü
-Vsrc/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java,f\b\fbb2241be41cb3e33b3972a1e0455f171de532a4
+n
+>src/main/java/com/parkit/parkingsystem/dao/ParkingSpotDAO.java,7\5\7550c37a2401ab8096eab3d6f0d62b891b9c9155
+p
+@src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java,3\c\3c54d5d7febc45facabac5e0634ff9591a676a28
+r
+Bsrc/main/java/com/parkit/parkingsystem/service/ParkingService.java,3\0\3010778988e0a8c9498c5b9ccbb0c445bb7c8f19
+r
+Bsrc/test/java/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.java,6\b\6b7fc2a2cf62007ee1f8f21baec53dd1fb450fb9
+i
+9src/main/java/com/parkit/parkingsystem/dao/TicketDAO.java,1\2\12ca9e2a95f124676d15845f1cf999cb45b2db5e
+j
+:.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254.xml,3\f\3f836a228e623abd0c11f02714b424ccda9579ac
+ê
+`.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254/storage_v2/_src_/schema/mysql.osA4Bg.meta,7\4\7458107467626d06bba28154da156d90e8b80049
+ù
+m.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254/storage_v2/_src_/schema/information_schema.FNRwLQ.meta,8\b\8b9c13191b939b6d26bc840f2dbc0003a6fef10a
+ù
+m.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254/storage_v2/_src_/schema/performance_schema.kIw0nw.meta,6\e\6e6e686c958b5b97db0dadc48a831fcc87ec922d
+é
+^.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254/storage_v2/_src_/schema/sys.zb4BAA.meta,2\f\2fa5f2093ceafda2b01ee78f1b62166cb8c753b6
