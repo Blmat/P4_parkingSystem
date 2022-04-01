@@ -42,11 +42,6 @@ class ParkingServiceTest {
         dataBasePrepareService.clearDataBaseEntries();
     }
 
-    @AfterAll
-    private static void closeTest() {
-        dataBasePrepareService.clearDataBaseEntries();
-    }
-
     @Test
     @DisplayName("Test if the updateParking() method, the getTicket() method and the updateTicket() method are invoked")
     public void processExitingVehicleTest() throws Exception {

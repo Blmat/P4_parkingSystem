@@ -162,6 +162,7 @@
                         <exclude>com/parkit/parkingsystem/constants/DBConstants.class</exclude>
                         <exclude>com/parkit/parkingsystem/constants/Fare.class</exclude>
                         <exclude>com/parkit/parkingsystem/App.class</exclude>
+                        <exclude>com/parkit/parkingsystem/constants/ParkingType.class</exclude>
                     </excludes>
                 </configuration>
                 <executions>

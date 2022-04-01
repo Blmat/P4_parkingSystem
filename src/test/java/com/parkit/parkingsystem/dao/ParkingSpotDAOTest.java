@@ -1,44 +1,66 @@
 package com.parkit.parkingsystem.dao;
 
 import com.parkit.parkingsystem.constants.ParkingType;
-import com.parkit.parkingsystem.integration.config.DataBaseTestConfig;
 import com.parkit.parkingsystem.integration.service.DataBasePrepareService;
 import com.parkit.parkingsystem.model.ParkingSpot;
-import org.junit.jupiter.api.BeforeAll;
+import junit.framework.Assert;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ParkingSpotDAOTest {
-    private static final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
-    private static DataBasePrepareService dataBasePrepareService;
     private static ParkingSpotDAO parkingSpotDAO;
-
-    private final ParkingType parkingType = ParkingType.CAR;
-
-    @BeforeAll
-    private static void setUp() {
-        parkingSpotDAO = new ParkingSpotDAO();
-        parkingSpotDAO.dataBaseConfig = dataBaseTestConfig;
-        dataBasePrepareService = new DataBasePrepareService();
-    }
+    private static DataBasePrepareService dataBasePrepareService;
 
     @BeforeEach
     private void setUpPerTest() {
+        parkingSpotDAO = new ParkingSpotDAO();
+        dataBasePrepareService = new DataBasePrepareService();
         dataBasePrepareService.clearDataBaseEntries();
     }
 
-    @Test
-    public void gettingNextSlotAvailableTest() {
-        assertEquals(1, parkingSpotDAO.getNextAvailableSlot(parkingType));
+    @AfterAll
+    private static void closeTest() throws IOException, ClassNotFoundException {
+        dataBasePrepareService.clearDataBaseEntries();
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, true);
+        parkingSpotDAO.updateParking(parkingSpot);
     }
 
-    @Test
-    public void updatingParkingSlotTest() {
-        ParkingSpot parkingSpot = new ParkingSpot(parkingSpotDAO.getNextAvailableSlot(parkingType), parkingType, false);
-        assertTrue(parkingSpotDAO.updateParking(parkingSpot));
-        assertEquals(2, parkingSpotDAO.getNextAvailableSlot(parkingType));
+    @Test // Test the method getNextAvailableSlot() with car
+    public void getNextAvailableSlotCarTest() throws IOException, ClassNotFoundException {
+        Assert.assertEquals(1, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
+    }
+
+    @Test // Test the method getNextAvailableSlot() with bike
+    public void getNextAvailableSlotBikeTest() throws IOException, ClassNotFoundException {
+        Assert.assertEquals(4, parkingSpotDAO.getNextAvailableSlot(ParkingType.BIKE));
+    }
+    @Test // Test the method getNextAvailableSlot() with null ParkingType
+    public void getNextAvailableSlotNullParkingTypeTest() {
+        assertThrows(NullPointerException.class, () ->parkingSpotDAO.getNextAvailableSlot(null));
+    }
+
+    @Test // Test the method updateParking() with car
+    public void updateParkingTest() throws IOException, ClassNotFoundException {
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
+        Assert.assertTrue(parkingSpotDAO.updateParking(parkingSpot));
+
+    }
+
+    @Test // Test the method getNextAvailableSlot() with null ParkingType
+    public void updateParkingWithNoParkingTypeTest() throws IOException, ClassNotFoundException {
+        ParkingSpot parkingSpot = new ParkingSpot(1, null, false);
+        Assert.assertTrue(parkingSpotDAO.updateParking(parkingSpot));
+    }
+
+    @Test // Test the method getNextAvailableSlot() with negative Parking Slot
+    public void updateParkingWithNegativeParkingSlotTest() throws IOException, ClassNotFoundException {
+        ParkingSpot parkingSpot = new ParkingSpot(-1, ParkingType.CAR, false);
+        Assert.assertFalse(parkingSpotDAO.updateParking(parkingSpot));
     }
 
 }
