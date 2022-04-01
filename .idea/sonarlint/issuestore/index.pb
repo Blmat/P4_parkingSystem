@@ -15,10 +15,6 @@ Qsrc/test/java/com/parkit/parkingsystem/integration/config/DataBaseTestConfig.ja
 Vsrc/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java,f\b\fbb2241be41cb3e33b3972a1e0455f171de532a4
 h
 8src/main/java/com/parkit/parkingsystem/model/Ticket.java,8\3\83ca0dc357a8c4d44de3d7afb64a8ac2f9eaf20c
-m
-=src/main/java/com/parkit/parkingsystem/model/ParkingSpot.java,3\1\318986ef301ad062e600ed154b628f156483e6f7
-y
-Isrc/main/java/com/parkit/parkingsystem/service/FareCalculatorService.java,c\a\ca8d38eaa07ba4c323ae82bc7ea69a1d687a19bf
 j
 :src/main/java/com/parkit/parkingsystem/constants/Fare.java,5\e\5ee126867486501dbae39851404efa4711df85bc
 7

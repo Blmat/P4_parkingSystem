@@ -79,10 +79,23 @@ public class FareCalculatorServiceTest {
         assertThrows(NullPointerException.class, () -> fareCalculatorService.calculateFare(ticket));
     }
     @Test
-    void calculateFareTestBikeWithNullOutTime() {
+    @DisplayName("Test for Default type of vehicle")
+    public void calculateFareDefaultType() {
         Date inTime = new Date();
         inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
         Date outTime = new Date();
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.DEFAULT, false);
+
+        ticket.setInTime(inTime);
+        ticket.setOutTime(outTime);
+        ticket.setParkingSpot(parkingSpot);
+        assertThrows(IllegalArgumentException.class, () -> fareCalculatorService.calculateFare(ticket));
+    }
+    @Test
+    void calculateFareTestBikeWithNullOutTime() {
+        Date inTime = new Date();
+        inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
+
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE,false);
 
         ticket.setInTime(inTime);
@@ -91,18 +104,11 @@ public class FareCalculatorServiceTest {
 
         assertThrows(Exception.class, () -> fareCalculatorService.calculateFare(ticket));
     }
-    @Test // Calculate the fare when the Outime is null
-    public void OutTimeIsNull() {
-        ticket.setOutTime(null);
-        assertThrows(NullPointerException.class, () -> {
-            fareCalculatorService.calculateFare(ticket); });
 
-    }
     @Test
     void calculateFareTestCarWithNullOutTime() {
         Date inTime = new Date();
         inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
-        Date outTime = new Date();
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
         ticket.setInTime(inTime);
@@ -135,6 +141,7 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         assertThrows(IllegalArgumentException.class, () -> fareCalculatorService.calculateFare(ticket));
     }
+
 
     @Test
     public void calculateFareBikeWithLessThanOneHourParkingTime() {

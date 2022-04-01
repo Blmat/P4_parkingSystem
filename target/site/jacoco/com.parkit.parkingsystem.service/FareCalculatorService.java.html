@@ -20,7 +20,7 @@ import java.time.Duration;
 <span class="fc" id="L20">            ticket.setPrice(0f);</span>
         } else {
             // Duration en heure: 60f = conversion en double
-<span class="pc bpc" id="L23" title="1 of 3 branches missed.">            switch (ticket.getParkingSpot().getParkingType()) {</span>
+<span class="fc bfc" id="L23" title="All 3 branches covered.">            switch (ticket.getParkingSpot().getParkingType()) {</span>
                 case CAR: {
 <span class="fc" id="L25">                    ticket.setPrice(duration.toMinutes() / 60f * Fare.CAR_RATE_PER_HOUR);</span>
 <span class="fc" id="L26">                    break;</span>
@@ -29,8 +29,8 @@ import java.time.Duration;
 <span class="fc" id="L29">                    ticket.setPrice(duration.toMinutes() / 60f * Fare.BIKE_RATE_PER_HOUR);</span>
 <span class="fc" id="L30">                    break;</span>
                 }
-                default:
-<span class="nc" id="L33">                    throw new IllegalArgumentException(&quot;Unkown Parking Type&quot;);</span>
+                default: case DEFAULT:
+<span class="fc" id="L33">                    throw new IllegalArgumentException(&quot;Unkown Parking Type&quot;);</span>
             }
         }
 <span class="fc" id="L36">    }</span>
