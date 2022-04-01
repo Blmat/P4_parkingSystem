@@ -91,6 +91,13 @@ public class FareCalculatorServiceTest {
 
         assertThrows(Exception.class, () -> fareCalculatorService.calculateFare(ticket));
     }
+    @Test // Calculate the fare when the Outime is null
+    public void OutTimeIsNull() {
+        ticket.setOutTime(null);
+        assertThrows(NullPointerException.class, () -> {
+            fareCalculatorService.calculateFare(ticket); });
+
+    }
     @Test
     void calculateFareTestCarWithNullOutTime() {
         Date inTime = new Date();
