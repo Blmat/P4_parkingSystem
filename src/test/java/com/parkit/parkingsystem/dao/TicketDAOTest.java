@@ -79,7 +79,6 @@ class TicketDAOTest {
     public void saveTicketWithNoDataTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
         Ticket ticket = new Ticket();
-
         assertFalse(ticketDAO.saveTicket(ticket));
     }
 
@@ -153,11 +152,7 @@ class TicketDAOTest {
         ticket.setPrice(1.5);
         ticket.setOutTime(new java.sql.Date(System.currentTimeMillis() - (2 * 60 * 60 * 1000)));
 
-        if (ticketDAO.updateTicket(ticket)) {
-            parkingSpot.setAvailable(true);
-        } else {
-            parkingSpot.setAvailable(false);
-        }
+        parkingSpot.setAvailable(ticketDAO.updateTicket(ticket));
         assertTrue(parkingSpot.isAvailable());
     }
 

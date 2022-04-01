@@ -17,7 +17,5 @@ j
 :src/main/java/com/parkit/parkingsystem/constants/Fare.java,5\e\5ee126867486501dbae39851404efa4711df85bc
 t
 Dsrc/main/java/com/parkit/parkingsystem/service/InteractiveShell.java,7\7\773c684c7c8bfd06f3cca6e47054bf5e1510573f
-q
-Asrc/main/java/com/parkit/parkingsystem/config/DataBaseConfig.java,3\d\3dc6d1078af5e430ee41185cb7fa3aded8bacc0d
 _
 /src/main/java/com/parkit/parkingsystem/App.java,f\4\f413b9814992e2e3525f88e4eb1a9b6234768a0e
