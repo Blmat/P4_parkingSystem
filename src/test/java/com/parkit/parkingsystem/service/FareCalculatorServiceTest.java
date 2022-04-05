@@ -30,7 +30,7 @@ public class FareCalculatorServiceTest {
     }
     @BeforeEach
     private void setUpPerTest() {
-        ticket = new Ticket();
+        ticket = new Ticket(false);
     }
 
     @Test
@@ -230,17 +230,17 @@ public class FareCalculatorServiceTest {
     @DisplayName("Test with discount for car")
     public void calculateFareCarWithRegularCustomer() {
         Date inTime = new Date();
-        inTime.setTime(System.currentTimeMillis() - (24 * 60 * 60 * 1000));
+        inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
         Date outTime = new Date();
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
 
         ticket.setInTime(inTime);
         ticket.setOutTime(outTime);
         ticket.setParkingSpot(parkingSpot);
-        fareCalculatorService.discountForRegularCustomer(ticket, Fare.DISCOUNT_FOR_REGULAR_CUSTOMER);
+        ticket.setDiscount(true);
 
-        assertEquals((int)  (ticket.getPrice()),
-                (int) (24 * Fare.CAR_RATE_PER_HOUR ));
+        fareCalculatorService.calculateFare(ticket);
+        assertEquals((1 * Fare.CAR_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER), ticket.getPrice());
     }
     @Test
     @DisplayName("Test with discount for bike")
@@ -253,9 +253,9 @@ public class FareCalculatorServiceTest {
         ticket.setInTime(inTime);
         ticket.setOutTime(outTime);
         ticket.setParkingSpot(parkingSpot);
-        fareCalculatorService.discountForRegularCustomer(ticket,Fare.DISCOUNT_FOR_REGULAR_CUSTOMER);
+        ticket.setDiscount(true);
 
-        assertEquals((int) (ticket.getPrice()),
-                (int) (24 * Fare.BIKE_RATE_PER_HOUR));
+        fareCalculatorService.calculateFare(ticket);
+        assertEquals((24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER), ticket.getPrice());
     }
 }

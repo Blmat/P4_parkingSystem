@@ -1,6 +1,5 @@
 package com.parkit.parkingsystem.config;
 
-import com.parkit.parkingsystem.constants.DBConstants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

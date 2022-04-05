@@ -145,7 +145,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.sql.Connection;
@@ -246,7 +245,7 @@ public class ParkingServiceTest {
         java.util.Date inTime = new java.util.Date();
         inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
         java.util.Date outTime = new Date();
-        ticket = new Ticket();
+        ticket = new Ticket(false);
         ticket.setVehicleRegNumber("ABCDEF");
         ticket.setParkingSpot(new ParkingSpot(1, ParkingType.CAR, false));
         ticket.setInTime(inTime);

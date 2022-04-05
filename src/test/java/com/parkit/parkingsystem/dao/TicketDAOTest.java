@@ -1,6 +1,5 @@
 package com.parkit.parkingsystem.dao;
 
-import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.constants.ParkingType;
 import com.parkit.parkingsystem.integration.config.DataBaseTestConfig;
 import com.parkit.parkingsystem.integration.service.DataBasePrepareService;
@@ -64,7 +63,7 @@ class TicketDAOTest {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket(false);
         ticket.setInTime(new java.sql.Date(System.currentTimeMillis()));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
@@ -78,7 +77,7 @@ class TicketDAOTest {
     @Test // Test the method getNextAvailableSlot() with no data
     public void saveTicketWithNoDataTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket(false);
         assertFalse(ticketDAO.saveTicket(ticket));
     }
 
@@ -94,7 +93,7 @@ class TicketDAOTest {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket(false);
         ticket.setInTime(new java.sql.Date(System.currentTimeMillis()));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
@@ -110,7 +109,7 @@ class TicketDAOTest {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket(true);
         ticket.setInTime(new java.sql.Date(System.currentTimeMillis() - (26 * 60 * 60 * 1000)));
         ticket.setOutTime(new java.sql.Date(System.currentTimeMillis() - (25 * 60 * 60 * 1000)));
         ticket.setParkingSpot(parkingSpot);
@@ -141,7 +140,7 @@ class TicketDAOTest {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket(false);
         ticket.setInTime(new java.sql.Date(System.currentTimeMillis() - (3 * 60 * 60 * 1000)));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
@@ -162,7 +161,7 @@ class TicketDAOTest {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket(false);
         ticket.setInTime(new Date(System.currentTimeMillis() - (3 * 60 * 60 * 1000)));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
