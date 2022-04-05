@@ -38,16 +38,7 @@ class TicketDAOTest {
         dataBasePrepareService = new DataBasePrepareService();
         dataBasePrepareService.clearDataBaseEntries();
     }
-    @BeforeAll
-    private static void setBeforeAll() {
 
-       ParkingSpotDAO parkingSpotDAO = new ParkingSpotDAO();
-        parkingSpotDAO.dataBaseConfig = dataBaseTestConfig;
-        ticketDAO = new TicketDAO();
-        ticketDAO.dataBaseConfig = dataBaseTestConfig;
-        dataBasePrepareService = new DataBasePrepareService();
-        dataBasePrepareService.clearDataBaseEntries();
-    }
     @BeforeEach
     private void setUpPerTest() throws Exception {
         when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("ABCDEF");
@@ -58,6 +49,7 @@ class TicketDAOTest {
     private void init(){
         dataBasePrepareService.clearDataBaseEntries();
     }
+
     @Test // Test the method saveTicket()
     public void saveTicketTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
