@@ -97,7 +97,7 @@ public class TicketDAO {
 
         try {
             con = dataBaseConfig.getConnection();
-            PreparedStatement ps = con.prepareStatement(DBConstants.GET_VEHICLE_COUNT);
+            PreparedStatement ps = con.prepareStatement(DBConstants.IS_RECURRENT);
             try {
                 ps.setString(1, vehicleRegNumber);
                 try (ResultSet rs = ps.executeQuery()) {

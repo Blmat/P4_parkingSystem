@@ -86,7 +86,7 @@ class TicketDAOTest {
     public void getTicketNullTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
-        assertNull(ticketDAO.getTicket("AAAAA"));
+        assertNull(ticketDAO.getTicket("A1B2C3D4"));
     }
 
     @Test // Test the method getTicket()
