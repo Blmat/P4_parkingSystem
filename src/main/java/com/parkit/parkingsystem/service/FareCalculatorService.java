@@ -3,7 +3,11 @@ package com.parkit.parkingsystem.service;
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
+import java.text.DecimalFormat;
+
 public class FareCalculatorService {
+
+    private final DecimalFormat df = new DecimalFormat("#.##");
 
     public void calculateFare(Ticket ticket) {
         if ((ticket.getOutTime() == null)
@@ -24,7 +28,7 @@ public class FareCalculatorService {
         double reduction = 1;
         //check in the ticket if user can get reduction
         if (ticket.isDiscount()) {
-            reduction = Fare.DISCOUNT_FOR_REGULAR_CUSTOMER;
+           reduction = Fare.DISCOUNT_FOR_REGULAR_CUSTOMER;
         }
         //change the fare depending on the vehicle type
         switch (ticket.getParkingSpot().getParkingType()) {
@@ -36,8 +40,9 @@ public class FareCalculatorService {
                 ticket.setPrice(duration * Fare.BIKE_RATE_PER_HOUR * reduction);
                 break;
             }
-            default: case DEFAULT:
+            default:
+            case DEFAULT:
                 throw new IllegalArgumentException("Unknown Parking Type");
         }
-        }
     }
+}

@@ -149,6 +149,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -157,6 +158,8 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class ParkingServiceTest {
+
+    private final DecimalFormat df = new DecimalFormat("#.##");
 
     @Mock
     private DataBaseTestConfig dataBaseTestConfig;
@@ -173,7 +176,6 @@ public class ParkingServiceTest {
 
     private ParkingService parkingService;
     private Logger logger;
-
 
     @BeforeEach
     private void setUpPerTest() throws SQLException, ClassNotFoundException {
@@ -213,8 +215,8 @@ public class ParkingServiceTest {
         parkingService.getNextParkingNumberIfAvailable();
 
         assertThrows(Exception.class, () -> logger.getName());
-    }
 
+    }
 
     @Test
     public void processValidIncomingVehicleTest() throws Exception {
@@ -260,7 +262,7 @@ public class ParkingServiceTest {
 
         verify(parkingSpotDAO, times(1)).updateParking(any(ParkingSpot.class));
 
-        assertEquals(1* Fare.CAR_RATE_PER_HOUR, ticket.getPrice());
+        assertEquals(df.format(1 * Fare.CAR_RATE_PER_HOUR), df.format(ticket.getPrice()));
     }
 
     @Test

@@ -54,7 +54,7 @@ import java.sql.Timestamp;
 <span class="fc" id="L54">            ps.setString(1, vehicleRegNumber);</span>
 <span class="fc" id="L55">            ResultSet rs = ps.executeQuery();</span>
 <span class="fc bfc" id="L56" title="All 2 branches covered.">            if (rs.next()) {</span>
-<span class="fc" id="L57">                ticket = new Ticket();</span>
+<span class="fc" id="L57">                ticket = new Ticket(false);</span>
 <span class="fc" id="L58">                ParkingSpot parkingSpot = new ParkingSpot(rs.getInt(1), ParkingType.valueOf(rs.getString(6)), false);</span>
 <span class="fc" id="L59">                ticket.setParkingSpot(parkingSpot);</span>
 <span class="fc" id="L60">                ticket.setId(rs.getInt(2));</span>

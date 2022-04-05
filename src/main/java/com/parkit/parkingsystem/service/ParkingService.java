@@ -60,7 +60,7 @@ public class ParkingService {
         return inputReaderUtil.readVehicleRegistrationNumber();
     }
 
-    public ParkingSpot getNextParkingNumberIfAvailable(){
+    public ParkingSpot getNextParkingNumberIfAvailable()throws RuntimeException{
         int parkingNumber=0;
         ParkingSpot parkingSpot = null;
         try{
@@ -91,17 +91,14 @@ public class ParkingService {
             case 2: {
                 return ParkingType.BIKE;
             }
-            default: {
+            default: case 3:{
                 logger.error("Incorrect input provided");
                 throw new IllegalArgumentException("Entered input is invalid");
             }
-
         }
     }
-
     /**
-     * Exiting vehicle manipulation
-     * update ticket with
+     * Process when vehicle exit.
      */
     public void processExitingVehicle() {
         try{
