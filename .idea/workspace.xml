@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="jacoco 62%">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="nettoyage de plusieurs classe">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/util/InputReaderUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/dao/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/dao/TicketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/util/InputReaderUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/util/InputReaderUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/parking-system-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/parking-system-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/parking-system-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/parking-system-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/TicketDAO.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/TicketDAO.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/TicketDAO.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/TicketDAO.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.dao/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/InputReaderUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/InputReaderUtil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/InputReaderUtil.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/InputReaderUtil.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.util/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.ParkingSpotDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.ParkingSpotDAOTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" afterDir="false" />
@@ -138,16 +146,16 @@
       <command value="mvn site:site" />
       <command value="mvn surefire:test" />
       <command value="mvn verify" />
-      <command value="mvn jacoco:report" />
       <command value="mvn surefire report: report" />
       <command value="mvn  surefire-report:report -DoutputDirectory=newpath" />
       <command value="mvn test" />
       <command value="mvn clean pmd:pmd site" />
       <command value="mvn clean" />
       <command value="mvn clean package" />
+      <command value="mvn jacoco:report" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in P4_parkingSystem">
+  <component name="RunManager" selected="JUnit.InputReaderUtilTest">
     <configuration name="All in P4_parkingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <option name="PACKAGE_NAME" value="" />
@@ -219,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InputReaderUtilTest" />
         <item itemvalue="JUnit.All in P4_parkingSystem" />
         <item itemvalue="JUnit.ParkingServiceTest" />
         <item itemvalue="JUnit.TicketDAOTest" />
         <item itemvalue="JUnit.InputReaderUtilTest.InputCannotBeParseToInt" />
-        <item itemvalue="JUnit.InputReaderUtilTest" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +257,7 @@
       <workItem from="1649159525634" duration="2631000" />
       <workItem from="1649164342859" duration="21085000" />
       <workItem from="1649250666929" duration="1047000" />
-      <workItem from="1649677691240" duration="5340000" />
+      <workItem from="1649677691240" duration="6683000" />
     </task>
     <task id="LOCAL-00001" summary="version2">
       <created>1648741226405</created>
@@ -349,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649200519084</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="nettoyage de plusieurs classe">
+      <created>1649692268249</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1649692268249</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +419,8 @@
     <MESSAGE value="modif POM" />
     <MESSAGE value="modification Test discount+Class Ticket" />
     <MESSAGE value="jacoco 62%" />
-    <option name="LAST_COMMIT_MESSAGE" value="jacoco 62%" />
+    <MESSAGE value="nettoyage de plusieurs classe" />
+    <option name="LAST_COMMIT_MESSAGE" value="nettoyage de plusieurs classe" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
