@@ -6,10 +6,7 @@ import com.parkit.parkingsystem.integration.service.DataBasePrepareService;
 import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.util.InputReaderUtil;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -50,7 +47,8 @@ class TicketDAOTest {
         dataBasePrepareService.clearDataBaseEntries();
     }
 
-    @Test // Test the method saveTicket()
+    @Test
+    @DisplayName("Test the method saveTicket()")
     public void saveTicketTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
@@ -66,21 +64,24 @@ class TicketDAOTest {
         assertTrue(ticketDAO.saveTicket(ticket));
     }
 
-    @Test // Test the method getNextAvailableSlot() with no data
+    @Test
+    @DisplayName("Test the method getNextAvailableSlot() with no data")
     public void saveTicketWithNoDataTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
         Ticket ticket = new Ticket(false);
         assertFalse(ticketDAO.saveTicket(ticket));
     }
 
-    @Test // Test the method getTicket() with no data
+    @Test
+    @DisplayName("Test the method getTicket() with no data")
     public void getTicketNullTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         assertNull(ticketDAO.getTicket("A1B2C3D4"));
     }
 
-    @Test // Test the method getTicket()
+    @Test
+    @DisplayName("Test the method getTicket()")
     public void getTicketTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
@@ -96,7 +97,8 @@ class TicketDAOTest {
         assertNotNull(ticketDAO.getTicket(vehicleRegNumber));
     }
 
-    @Test // Test the method getVehicleRegNumberFromPastUsers() with recurrent user
+    @Test
+    @DisplayName("Test the method getVehicleRegNumberFromPastUsers() with recurrent user")
     public void getVehicleRegNumberFromPastUsersTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
@@ -119,14 +121,16 @@ class TicketDAOTest {
         assertEquals(2, ticketDAO.getVehicleRegNumberFromPastUsers(vehicleRegNumber));
     }
 
-    @Test // Test getVehicleRegNumberFromPastUsersTest() with no recurrent user
+    @Test
+    @DisplayName("Test getVehicleRegNumberFromPastUsersTest() with no recurrent user")
     public void getVehicleRegNumberFromPastUsersWithNoDataTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         assertEquals(0, ticketDAO.getVehicleRegNumberFromPastUsers("AA"));
     }
 
-    @Test // Test the updateTicket() method
+    @Test
+    @DisplayName("Test the updateTicket() method")
     public void updateTicketTest() throws Exception {
 
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
@@ -147,7 +151,8 @@ class TicketDAOTest {
         assertTrue(parkingSpot.isAvailable());
     }
 
-    @Test // Test the updateTicket() method with no data to update
+    @Test
+    @DisplayName("Test the updateTicket() method with no data to update")
     public void updateTicketWithNoDataTest() throws Exception {
 
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
