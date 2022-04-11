@@ -7,13 +7,13 @@ import java.util.Scanner;
 
 public class InputReaderUtil {
 
-    private static Scanner scan = new Scanner(System.in);
+
     private static final Logger logger = LogManager.getLogger("InputReaderUtil");
 
     public int readSelection() {
+        Scanner scan = new Scanner(System.in);
         try {
-            int input = Integer.parseInt(scan.nextLine());
-            return input;
+            return Integer.parseInt(scan.nextLine());
         }catch(Exception e){
             logger.error("Error while reading user input from Shell", e);
             System.out.println("Error reading input. Please enter valid number for proceeding further");
@@ -22,10 +22,13 @@ public class InputReaderUtil {
     }
 
     public String readVehicleRegistrationNumber() throws Exception {
+        Scanner scan= new Scanner(System.in);
         try {
             String vehicleRegNumber= scan.nextLine();
             if(vehicleRegNumber == null || vehicleRegNumber.trim().length()==0) {
                 throw new IllegalArgumentException("Invalid input provided");
+            } else if (vehicleRegNumber.trim().length() > 10) {
+                throw new IllegalArgumentException("The input is too long. it must be less that 11 digits");
             }
             return vehicleRegNumber;
         }catch(Exception e){
