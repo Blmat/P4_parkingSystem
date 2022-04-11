@@ -34,6 +34,7 @@ public class TicketDAO {
                 ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));
                 ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));
                 ps.execute();
+                ps.close();
                 return true;
             } finally {
                 dataBaseConfig.closeConnection(con);
@@ -82,6 +83,7 @@ public class TicketDAO {
             ps.setTimestamp(2, new Timestamp(ticket.getOutTime().getTime()));
             ps.setInt(3, ticket.getId());
             ps.execute();
+            con.close();
             return true;
         } catch (Exception ex) {
             logger.error("Error saving ticket info", ex);

@@ -141,6 +141,7 @@ import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.util.InputReaderUtil;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -160,9 +161,10 @@ import static org.mockito.Mockito.*;
 public class ParkingServiceTest {
 
     private final DecimalFormat df = new DecimalFormat("#.##");
+    private final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
+    private Connection con= dataBaseTestConfig.getConnection();
 
-    @Mock
-    private DataBaseTestConfig dataBaseTestConfig;
+
     @Mock
     private static InputReaderUtil inputReaderUtil;
     @Mock
@@ -177,10 +179,19 @@ public class ParkingServiceTest {
     private ParkingService parkingService;
     private Logger logger;
 
+    public ParkingServiceTest() throws SQLException, ClassNotFoundException {
+    }
+
     @BeforeEach
     private void setUpPerTest() throws SQLException, ClassNotFoundException {
-        Connection con = dataBaseTestConfig.getConnection();
+        con = dataBaseTestConfig.getConnection();
         parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
+
+    }
+
+    @AfterEach
+    private void clearConnection() throws SQLException {
+       con.close();
     }
 
     @Test
