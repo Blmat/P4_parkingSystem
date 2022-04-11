@@ -253,6 +253,8 @@ public class ParkingServiceTest {
         assertThrows(Exception.class, () -> logger.error("Unable to process incoming vehicle"));
     }
 
+
+
     @Test
     public void processValidExitingVehicleTest() throws Exception {
         java.util.Date inTime = new java.util.Date();

@@ -27,8 +27,8 @@ import java.util.Scanner;
 <span class="fc" id="L27">            String vehicleRegNumber= scan.nextLine();</span>
 <span class="pc bpc" id="L28" title="2 of 4 branches missed.">            if(vehicleRegNumber == null || vehicleRegNumber.trim().length()==0) {</span>
 <span class="nc" id="L29">                throw new IllegalArgumentException(&quot;Invalid input provided&quot;);</span>
-<span class="fc bfc" id="L30" title="All 2 branches covered.">            } else if (vehicleRegNumber.trim().length() &gt; 9) {</span>
-<span class="fc" id="L31">                throw new IllegalArgumentException(&quot;The input is too long. it must be less that 10 digits&quot;);</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            } else if (vehicleRegNumber.trim().length() &gt; 10) {</span>
+<span class="fc" id="L31">                throw new IllegalArgumentException(&quot;The input is too long. it must be less that 11 digits&quot;);</span>
             }
 <span class="fc" id="L33">            return vehicleRegNumber;</span>
 <span class="fc" id="L34">        }catch(Exception e){</span>

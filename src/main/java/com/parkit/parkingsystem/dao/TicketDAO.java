@@ -26,7 +26,6 @@ public class TicketDAO {
             con = dataBaseConfig.getConnection();
             PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-            //ps.setInt(1,ticket.getId());
             try {
                 ps.setInt(1, ticket.getParkingSpot().getId());
                 ps.setString(2, ticket.getVehicleRegNumber());
@@ -93,6 +92,7 @@ public class TicketDAO {
         return false;
     }
 
+//    Used to know if a user is already in the database
     public int getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
         Connection con = null;
         int occurrences = 0;
