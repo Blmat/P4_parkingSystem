@@ -27,5 +27,3 @@ q
 Asrc/main/java/com/parkit/parkingsystem/constants/ParkingType.java,d\8\d8f01a22f362ded7d3c261a801b40e51fef59549
 n
 >src/main/java/com/parkit/parkingsystem/dao/ParkingSpotDAO.java,7\5\7550c37a2401ab8096eab3d6f0d62b891b9c9155
-x
-Hsrc/test/java/com/parkit/parkingsystem/service/InteractiveShellTest.java,1\f\1f050eef38de431836dac3802c760c10c25b5117

@@ -27,8 +27,8 @@ public class InputReaderUtil {
             String vehicleRegNumber= scan.nextLine();
             if(vehicleRegNumber == null || vehicleRegNumber.trim().length()==0) {
                 throw new IllegalArgumentException("Invalid input provided");
-            } else if (vehicleRegNumber.trim().length() > 9) {
-                throw new IllegalArgumentException("The input is too long. it must be less that 10 digits");
+            } else if (vehicleRegNumber.trim().length() > 10) {
+                throw new IllegalArgumentException("The input is too long. it must be less that 11 digits");
             }
             return vehicleRegNumber;
         }catch(Exception e){

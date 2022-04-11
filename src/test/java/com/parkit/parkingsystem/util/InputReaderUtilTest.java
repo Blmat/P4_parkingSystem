@@ -1,6 +1,7 @@
 package com.parkit.parkingsystem.util;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -18,7 +19,9 @@ class InputReaderUtilTest {
         inputReaderUtil = new InputReaderUtil();
     }
 
-    @Test // Test the readSelection() method when the input is correct
+
+    @Test
+    @DisplayName("Test the readSelection() method when the input is correct")
     public void InputCanBeParseToInt() {
         String data = "1";
         InputStream in = new ByteArrayInputStream(data.getBytes());
@@ -26,15 +29,17 @@ class InputReaderUtilTest {
 
         assertEquals(1, inputReaderUtil.readSelection());
     }
-    @Test // Test the readSelection() method when the input is incorrect
+    @Test
+    @DisplayName("Test the readSelection() method when the input is incorrect")
     public void InputCannotBeParseToInt() {
-        String data = "eeeeee";
+        String data = "bababf";
         InputStream in = new ByteArrayInputStream(data.getBytes());
         System.setIn(in);
 
         assertEquals(-1, inputReaderUtil.readSelection());
     }
-    @Test // Test the readSelection() method when the input is empty
+    @Test
+    @DisplayName("Test the readSelection() method when the input is empty")
     public void InputIsEmpty() {
         String data = "";
         InputStream in = new ByteArrayInputStream(data.getBytes());
@@ -43,7 +48,8 @@ class InputReaderUtilTest {
         assertEquals(-1, inputReaderUtil.readSelection());
     }
 
-    @Test // Test the readVehicleRegistrationNumber() method when the input is correct
+    @Test
+    @DisplayName("Test the readVehicleRegistrationNumber() method when the input is correct")
     public void VehicleRegNumberIsCorrect() throws Exception {
         String data = "12345AZE6";
         InputStream in = new ByteArrayInputStream(data.getBytes());
@@ -52,7 +58,8 @@ class InputReaderUtilTest {
         assertEquals("12345AZE6", inputReaderUtil.readVehicleRegistrationNumber());
     }
 
-    @Test // Test the readVehicleRegistrationNumber() method when the input is too long
+    @Test
+    @DisplayName("Test the readVehicleRegistrationNumber() method when the input is too long")
     public void VehicleRegNumberIsTooLong() {
         String data = "12345678910";
         InputStream in = new ByteArrayInputStream(data.getBytes());
@@ -61,7 +68,8 @@ class InputReaderUtilTest {
         assertThrows(IllegalArgumentException.class, () -> inputReaderUtil.readVehicleRegistrationNumber());
     }
 
-    @Test  // Test the readVehicleRegistrationNumber() method when the input is empty
+    @Test
+    @DisplayName("Test the readVehicleRegistrationNumber() method when the input is empty")
     public void VehicleRegNumberIsEmpty() {
         String data = "";
         InputStream in = new ByteArrayInputStream(data.getBytes());
