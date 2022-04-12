@@ -41,9 +41,8 @@ public class Ticket {
 
     public double getPrice() {return price;}
 
-    public double setPrice(double price) {
+    public void setPrice(double price) {
         this.price = price;
-        return price;
     }
 
     public Date getInTime() {

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="inputFilesTest">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/InteractiveShellTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/util/InputReaderUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/util/InputReaderUtilTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="InteractiveShellTest créer + 2 test loadmenu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ad2dd296b278bccbecbbcb8039f786c644e41dfc" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,8 +98,8 @@
       <recent name="com.parkit.parkingsystem.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.parkit.parkingsystem.util" />
       <recent name="com.parkit.parkingsystem.service" />
+      <recent name="com.parkit.parkingsystem.util" />
       <recent name="com.parkit.parkingsystem.dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -122,18 +117,18 @@
       <command value="mvn findBugs" />
       <command value="mvn site:run" />
       <command value="mvn site:site" />
-      <command value="mvn surefire:test" />
       <command value="mvn verify" />
       <command value="mvn surefire report: report" />
       <command value="mvn  surefire-report:report -DoutputDirectory=newpath" />
-      <command value="mvn test" />
       <command value="mvn clean pmd:pmd site" />
-      <command value="mvn clean" />
       <command value="mvn clean package" />
       <command value="mvn jacoco:report" />
+      <command value="mvn clean" />
+      <command value="mvn surefire:test" />
+      <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FareCalculatorServiceTest.calculateFareBikeWithRegularCustomer">
+  <component name="RunManager" selected="JUnit.All in P4_parkingSystem">
     <configuration name="All in P4_parkingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <option name="PACKAGE_NAME" value="" />
@@ -142,7 +137,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FareCalculatorServiceTest.calculateFareBikeWithRegularCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InteractiveShellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -151,67 +146,65 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.FareCalculatorServiceTest" />
-      <option name="METHOD_NAME" value="calculateFareBikeWithRegularCustomer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InputReaderUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="P4_parkingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.util" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.util.InputReaderUtilTest" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.InteractiveShellTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputReaderUtilTest.InputCanBeParseToInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InteractiveShellTest.nullInLoadMenuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.util.*" />
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.util" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.util.InputReaderUtilTest" />
-      <option name="METHOD_NAME" value="InputCanBeParseToInt" />
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.InteractiveShellTest" />
+      <option name="METHOD_NAME" value="nullInLoadMenuTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputReaderUtilTest.InputCannotBeParseToInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.util.*" />
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.util" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.util.InputReaderUtilTest" />
-      <option name="METHOD_NAME" value="InputCannotBeParseToInt" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P4_parkingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.dao.TicketDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FareCalculatorServiceTest.calculateFareBikeWithRegularCustomer" />
-        <item itemvalue="JUnit.InputReaderUtilTest.InputCannotBeParseToInt" />
-        <item itemvalue="JUnit.InputReaderUtilTest.InputCanBeParseToInt" />
-        <item itemvalue="JUnit.InputReaderUtilTest" />
         <item itemvalue="JUnit.All in P4_parkingSystem" />
+        <item itemvalue="JUnit.InteractiveShellTest" />
+        <item itemvalue="JUnit.InteractiveShellTest.nullInLoadMenuTest" />
+        <item itemvalue="JUnit.TicketDAOTest" />
+        <item itemvalue="JUnit.ParkingServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +230,8 @@
       <workItem from="1649159525634" duration="2631000" />
       <workItem from="1649164342859" duration="21085000" />
       <workItem from="1649250666929" duration="1047000" />
-      <workItem from="1649677691240" duration="7972000" />
+      <workItem from="1649677691240" duration="9750000" />
+      <workItem from="1649709791992" duration="5662000" />
     </task>
     <task id="LOCAL-00001" summary="version2">
       <created>1648741226405</created>
@@ -351,7 +345,28 @@
       <option name="project" value="LOCAL" />
       <updated>1649693574203</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="inputFilesTest @displayname">
+      <created>1649695071295</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1649695071295</updated>
+    </task>
+    <task id="LOCAL-00018" summary="effacement ligne inutile">
+      <created>1649713499207</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1649713499208</updated>
+    </task>
+    <task id="LOCAL-00019" summary="InteractiveShellTest créer + 2 test loadmenu">
+      <created>1649724282689</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1649724282689</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +395,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/develop" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
@@ -408,7 +423,11 @@
     <MESSAGE value="jacoco 62%" />
     <MESSAGE value="nettoyage de plusieurs classe" />
     <MESSAGE value="inputFilesTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="inputFilesTest" />
+    <MESSAGE value="inputFilesTest @displayname" />
+    <MESSAGE value="effacement ligne inutile" />
+    <MESSAGE value="parkingDatabaseIT=TicketDAOTest + Displayname à tout les test" />
+    <MESSAGE value="InteractiveShellTest créer + 2 test loadmenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="InteractiveShellTest créer + 2 test loadmenu" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

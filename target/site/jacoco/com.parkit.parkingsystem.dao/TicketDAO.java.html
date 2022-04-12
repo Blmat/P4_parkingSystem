@@ -26,8 +26,8 @@ import java.sql.Timestamp;
 <span class="fc" id="L26">            con = dataBaseConfig.getConnection();</span>
 <span class="fc" id="L27">            PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);</span>
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-            //ps.setInt(1,ticket.getId());
             try {
+<span class="fc" id="L30">//                ps.setInt(1,ticket.getId());</span>
 <span class="fc" id="L31">                ps.setInt(1, ticket.getParkingSpot().getId());</span>
 <span class="fc" id="L32">                ps.setString(2, ticket.getVehicleRegNumber());</span>
 <span class="fc" id="L33">                ps.setDouble(3, ticket.getPrice());</span>

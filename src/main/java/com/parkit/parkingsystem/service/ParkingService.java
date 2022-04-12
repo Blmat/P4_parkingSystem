@@ -17,7 +17,7 @@ import java.util.Date;
 public class ParkingService {
 
     private static final Logger logger = LogManager.getLogger("ParkingService");
-
+    
     private final InputReaderUtil inputReaderUtil;
     private final ParkingSpotDAO parkingSpotDAO;
     private final TicketDAO ticketDAO;
@@ -34,12 +34,12 @@ public class ParkingService {
             if(parkingSpot !=null && parkingSpot.getId() > 0){
                 String vehicleRegNumber = getVehichleRegNumber();
                 parkingSpot.setAvailable(false);
-                parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark it's availability as false
+                parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark its availability as false
 
                 Date inTime = new Date();
                 Ticket ticket = new Ticket(false);
                 //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-                ticket.setId(1);
+                ticket.setId(0);
                 ticket.setParkingSpot(parkingSpot);
                 ticket.setVehicleRegNumber(vehicleRegNumber);
                 ticket.setPrice(0);
@@ -61,7 +61,7 @@ public class ParkingService {
     }
 
     public ParkingSpot getNextParkingNumberIfAvailable()throws RuntimeException{
-        int parkingNumber=0;
+        int parkingNumber;
         ParkingSpot parkingSpot = null;
         try{
             ParkingType parkingType = getVehichleType();
@@ -91,15 +91,13 @@ public class ParkingService {
             case 2: {
                 return ParkingType.BIKE;
             }
-            default: case 3:{
+            default: case 3:{  //Just to catch the exception during the test
                 logger.error("Incorrect input provided");
                 throw new IllegalArgumentException("Entered input is invalid");
             }
         }
     }
-    /**
-     * Process when vehicle exit.
-     */
+
     public void processExitingVehicle() {
         try{
             String vehicleRegNumber = getVehichleRegNumber();

@@ -3,11 +3,7 @@ package com.parkit.parkingsystem.service;
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
-import java.text.DecimalFormat;
-
 public class FareCalculatorService {
-
-    private final DecimalFormat df = new DecimalFormat("#.##");
 
     public void calculateFare(Ticket ticket) {
         if ((ticket.getOutTime() == null)
@@ -16,9 +12,9 @@ public class FareCalculatorService {
         }
 
         //calculate duration
-        double inHour = ticket.getInTime().getTime();
+        double inHour =  ticket.getInTime().getTime();
         double outHour = ticket.getOutTime().getTime();
-        double duration = (outHour - inHour) / (1000 * 60 * 60);
+        double duration =  (outHour - inHour) / (1000*60*60); //60*60*1000 =1h
         //if duration is less than 30 min set price to 0
         if (duration < 0.5) {
             ticket.setPrice(0);
