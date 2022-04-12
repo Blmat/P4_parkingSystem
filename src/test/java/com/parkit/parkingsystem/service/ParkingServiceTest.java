@@ -260,13 +260,13 @@ public class ParkingServiceTest {
         inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
         java.util.Date outTime = new Date();
         ticket = new Ticket(false);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("COUCOU");
         ticket.setParkingSpot(new ParkingSpot(1, ParkingType.CAR, false));
         ticket.setInTime(inTime);
         ticket.setOutTime(outTime);
 
         lenient().when(inputReaderUtil.readSelection()).thenReturn(2);
-        lenient().when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("ABCDEF");
+        lenient().when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("COUCOU");
         lenient().when(ticketDAO.updateTicket(ticket)).thenReturn(true);
         lenient().when(ticketDAO.getTicket(anyString())).thenReturn(ticket);
 
@@ -284,5 +284,13 @@ public class ParkingServiceTest {
         parkingService.processExitingVehicle();
 
         assertThrows(Exception.class, () -> logger.error("Unable to process exiting vehicle"));
+    }
+    @Test
+    public void processNull() throws Exception {
+        when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn(null);
+
+        parkingService.processExitingVehicle();
+
+        assertThrows(NullPointerException.class, () -> logger.error("Incorrect input provided"));
     }
 }

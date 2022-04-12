@@ -30,6 +30,32 @@ class InteractiveShellTest {
         in.close();
     }
     @Test
+    public void case1InLoadMenuTest() throws Exception {
+        String input ="1\n";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        System.setOut(new PrintStream(outContent));
+
+        InteractiveShell.loadInterface();
+
+        assertTrue(outContent.toString().contains("1 New Vehicle Entering - Allocate Parking Space"));
+
+        in.close();
+    }
+    @Test
+    public void case2InLoadMenuTest() throws Exception {
+        String input ="2\n";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        System.setOut(new PrintStream(outContent));
+
+        InteractiveShell.loadInterface();
+
+        assertTrue(outContent.toString().contains("2 Vehicle Exiting - Generate Ticket Price"));
+
+        in.close();
+    }
+    @Test
     public void nullInLoadMenuTest() throws Exception {
         String input ="4\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());

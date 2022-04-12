@@ -51,21 +51,11 @@ class InputReaderUtilTest {
     @Test
     @DisplayName("Test the readVehicleRegistrationNumber() method when the input is correct")
     public void VehicleRegNumberIsCorrect() throws Exception {
-        String data = "12345AZE6";
+        String data = "12345AZER";
         InputStream in = new ByteArrayInputStream(data.getBytes());
         System.setIn(in);
 
-        assertEquals("12345AZE6", inputReaderUtil.readVehicleRegistrationNumber());
-    }
-
-    @Test
-    @DisplayName("Test the readVehicleRegistrationNumber() method when the input is too long")
-    public void VehicleRegNumberIsTooLong() {
-        String data = "12345678910";
-        InputStream in = new ByteArrayInputStream(data.getBytes());
-        System.setIn(in);
-
-        assertThrows(IllegalArgumentException.class, () -> inputReaderUtil.readVehicleRegistrationNumber());
+        assertEquals("12345AZER", inputReaderUtil.readVehicleRegistrationNumber());
     }
 
     @Test
@@ -78,4 +68,13 @@ class InputReaderUtilTest {
         assertThrows(NoSuchElementException.class, () -> inputReaderUtil.readVehicleRegistrationNumber());
     }
 
+    @Test
+    @DisplayName("Test the readVehicleRegistrationNumber() method when the input is too long")
+    public void VehicleRegNumberIsTooLong() {
+        String data = "12345678910";
+        InputStream in = new ByteArrayInputStream(data.getBytes());
+        System.setIn(in);
+
+        assertThrows(IllegalArgumentException.class, () -> inputReaderUtil.readVehicleRegistrationNumber());
+    }
 }
