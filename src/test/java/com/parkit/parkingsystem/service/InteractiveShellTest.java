@@ -1,5 +1,6 @@
 package com.parkit.parkingsystem.service;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -29,7 +30,9 @@ class InteractiveShellTest {
 
         in.close();
     }
+
     @Test
+    @DisplayName("Test when user presses 1")
     public void case1InLoadMenuTest() throws Exception {
         String input ="1\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
@@ -43,6 +46,7 @@ class InteractiveShellTest {
         in.close();
     }
     @Test
+    @DisplayName("Test when user presses 2")
     public void case2InLoadMenuTest() throws Exception {
         String input ="2\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
@@ -56,6 +60,7 @@ class InteractiveShellTest {
         in.close();
     }
     @Test
+    @DisplayName("Test when user presses 2")
     public void nullInLoadMenuTest() throws Exception {
         String input ="4\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());

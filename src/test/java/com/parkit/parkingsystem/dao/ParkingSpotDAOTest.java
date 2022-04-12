@@ -72,7 +72,6 @@ class ParkingSpotDAOTest {
     public void ParkingSpotEqualsTrueTest() {
         ParkingSpot parkingSpot = new ParkingSpot(0, ParkingType.BIKE, true);
         assertEquals(parkingSpot, parkingSpot);
-
     }
 
     @Test
