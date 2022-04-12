@@ -34,7 +34,8 @@ import java.util.Scanner;
 <span class="fc" id="L34">        }catch(Exception e){</span>
 <span class="fc" id="L35">            logger.error(&quot;Error while reading user input from Shell&quot;, e);</span>
 <span class="fc" id="L36">            System.out.println(&quot;Error reading input. Please enter a valid string for vehicle registration number&quot;);</span>
-<span class="fc" id="L37">            throw e;</span>
+<span class="fc" id="L37">            scan.close();</span>
+<span class="fc" id="L38">            throw e;</span>
         }
     }
 

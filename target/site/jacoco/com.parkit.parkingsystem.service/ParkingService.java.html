@@ -17,7 +17,7 @@ import java.util.Date;
 public class ParkingService {
 
 <span class="fc" id="L19">    private static final Logger logger = LogManager.getLogger(&quot;ParkingService&quot;);</span>
-
+    
     private final InputReaderUtil inputReaderUtil;
     private final ParkingSpotDAO parkingSpotDAO;
     private final TicketDAO ticketDAO;
@@ -31,7 +31,7 @@ public class ParkingService {
     public void processIncomingVehicle() {
         try {
 <span class="fc" id="L33">            ParkingSpot parkingSpot = getNextParkingNumberIfAvailable();</span>
-<span class="pc bpc" id="L34" title="2 of 4 branches missed.">            if(parkingSpot !=null &amp;&amp; parkingSpot.getId() &gt; 0){</span>
+<span class="pc bpc" id="L34" title="1 of 4 branches missed.">            if(parkingSpot !=null &amp;&amp; parkingSpot.getId() &gt; 0){</span>
 <span class="fc" id="L35">                String vehicleRegNumber = getVehichleRegNumber();</span>
 <span class="fc" id="L36">                parkingSpot.setAvailable(false);</span>
 <span class="fc" id="L37">                parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark its availability as false</span>
@@ -71,11 +71,11 @@ public class ParkingService {
             }else{
 <span class="fc" id="L72">                throw new Exception(&quot;Error fetching parking number from DB. Parking slots might be full&quot;);</span>
             }
-<span class="nc" id="L74">        }catch(IllegalArgumentException ie){</span>
-<span class="nc" id="L75">            logger.error(&quot;Error parsing user input for type of vehicle&quot;, ie);</span>
+<span class="fc" id="L74">        }catch(IllegalArgumentException ie){</span>
+<span class="fc" id="L75">            logger.error(&quot;Error parsing user input for type of vehicle&quot;, ie);</span>
 <span class="fc" id="L76">        }catch(Exception e){</span>
 <span class="fc" id="L77">            logger.error(&quot;Error fetching next available parking slot&quot;, e);</span>
-<span class="pc" id="L78">        }</span>
+<span class="fc" id="L78">        }</span>
 <span class="fc" id="L79">        return parkingSpot;</span>
     }
 
@@ -84,7 +84,7 @@ public class ParkingService {
 <span class="fc" id="L84">        System.out.println(&quot;1 CAR&quot;);</span>
 <span class="fc" id="L85">        System.out.println(&quot;2 BIKE&quot;);</span>
 <span class="fc" id="L86">        int input = inputReaderUtil.readSelection();</span>
-<span class="pc bpc" id="L87" title="1 of 3 branches missed.">        switch(input){</span>
+<span class="fc bfc" id="L87" title="All 3 branches covered.">        switch(input){</span>
             case 1: {
 <span class="fc" id="L89">                return ParkingType.CAR;</span>
             }
@@ -92,8 +92,8 @@ public class ParkingService {
 <span class="fc" id="L92">                return ParkingType.BIKE;</span>
             }
             default: case 3:{  //Just to catch the exception during the test
-<span class="nc" id="L95">                logger.error(&quot;Incorrect input provided&quot;);</span>
-<span class="nc" id="L96">                throw new IllegalArgumentException(&quot;Entered input is invalid&quot;);</span>
+<span class="fc" id="L95">                logger.error(&quot;Incorrect input provided&quot;);</span>
+<span class="fc" id="L96">                throw new IllegalArgumentException(&quot;Entered input is invalid&quot;);</span>
             }
         }
     }
