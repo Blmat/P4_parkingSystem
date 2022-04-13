@@ -27,19 +27,18 @@ import com.parkit.parkingsystem.model.Ticket;
 <span class="fc" id="L27">           reduction = Fare.DISCOUNT_FOR_REGULAR_CUSTOMER;</span>
         }
         //change the fare depending on the vehicle type
-<span class="fc bfc" id="L30" title="All 3 branches covered.">        switch (ticket.getParkingSpot().getParkingType()) {</span>
-            case CAR: {
+<span class="pc bpc" id="L30" title="1 of 3 branches missed.">        switch (ticket.getParkingSpot().getParkingType()) {</span>
+            case CAR:
 <span class="fc" id="L32">                ticket.setPrice(duration * Fare.CAR_RATE_PER_HOUR * reduction);</span>
 <span class="fc" id="L33">                break;</span>
-            }
-            case BIKE: {
+
+            case BIKE:
 <span class="fc" id="L36">                ticket.setPrice(duration * Fare.BIKE_RATE_PER_HOUR * reduction);</span>
 <span class="fc" id="L37">                break;</span>
-            }
+
             default:
-            case DEFAULT:
-<span class="fc" id="L41">                throw new IllegalArgumentException(&quot;Unknown Parking Type&quot;);</span>
+<span class="nc" id="L40">                throw new IllegalArgumentException(&quot;Unknown Parking Type&quot;);</span>
         }
-<span class="fc" id="L43">    }</span>
+<span class="fc" id="L42">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
