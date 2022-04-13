@@ -33,9 +33,13 @@ k
 ;.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml,8\e\8e49fbfef2d6e6907515868cef0ad34fc1557633
 †
 Vsrc/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java,f\b\fbb2241be41cb3e33b3972a1e0455f171de532a4
-p
-@src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java,3\c\3c54d5d7febc45facabac5e0634ff9591a676a28
-r
-Bsrc/main/java/com/parkit/parkingsystem/service/ParkingService.java,3\0\3010778988e0a8c9498c5b9ccbb0c445bb7c8f19
 t
 Dsrc/main/java/com/parkit/parkingsystem/service/InteractiveShell.java,7\7\773c684c7c8bfd06f3cca6e47054bf5e1510573f
+v
+Fsrc/test/java/com/parkit/parkingsystem/service/DataBaseTestConfig.java,7\3\73c647abaa4bbc520570a4fb14dfb3eb7dee7ba2
+q
+Asrc/main/java/com/parkit/parkingsystem/config/DataBaseConfig.java,3\d\3dc6d1078af5e430ee41185cb7fa3aded8bacc0d
+i
+9src/main/java/com/parkit/parkingsystem/dao/TicketDAO.java,1\2\12ca9e2a95f124676d15845f1cf999cb45b2db5e
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

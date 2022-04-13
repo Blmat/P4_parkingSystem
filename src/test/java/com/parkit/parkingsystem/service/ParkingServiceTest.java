@@ -163,6 +163,8 @@ public class ParkingServiceTest {
     private final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private Connection con= dataBaseTestConfig.getConnection();
 
+    private ParkingService parkingService;
+    private Logger logger;
 
     @Mock
     private static InputReaderUtil inputReaderUtil;
@@ -175,8 +177,6 @@ public class ParkingServiceTest {
     @Mock
     private Ticket ticket;
 
-    private ParkingService parkingService;
-    private Logger logger;
 
     public ParkingServiceTest() throws SQLException, ClassNotFoundException {
     }

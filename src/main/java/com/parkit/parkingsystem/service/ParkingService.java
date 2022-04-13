@@ -91,7 +91,7 @@ public class ParkingService {
             case 2: {
                 return ParkingType.BIKE;
             }
-            default: case 3:{  //Just to catch the exception during the test
+            default:{
                 logger.error("Incorrect input provided");
                 throw new IllegalArgumentException("Entered input is invalid");
             }
