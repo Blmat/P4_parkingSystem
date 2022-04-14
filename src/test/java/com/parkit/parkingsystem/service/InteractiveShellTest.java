@@ -16,7 +16,7 @@ class InteractiveShellTest {
     @Test
     @DisplayName("Test loadMenu()")
     public void helloUser() throws Exception{
-        String input = "test";
+        String input = "3";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         System.setOut(new PrintStream(outContent));
@@ -35,7 +35,7 @@ class InteractiveShellTest {
     @Test
     @DisplayName("Test when user presses 1")
     public void case1InLoadMenuTest() throws Exception {
-        String input = "1\n";
+        String input = "1";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         System.setOut(new PrintStream(outContent));
@@ -47,7 +47,7 @@ class InteractiveShellTest {
     @Test
     @DisplayName("Test when user presses 2")
     public void case2InLoadMenuTest() throws Exception {
-        String input = "2\n";
+        String input = "2";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         System.setOut(new PrintStream(outContent));
@@ -56,17 +56,6 @@ class InteractiveShellTest {
         in.close();
     }
 
-    @Test
-    @DisplayName("Test when user presses 3")
-    public void menuTest() throws Exception {
-        String input = "3\n";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
-        System.setOut(new PrintStream(outContent));
-
-        InteractiveShell.loadInterface();
-        in.close();
-    }
     @Test
     @DisplayName("Test when user presses 4 = wrong number")
     public void nullInLoadMenuTest() throws Exception {

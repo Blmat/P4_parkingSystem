@@ -80,33 +80,6 @@ public class FareCalculatorServiceTest {
     }
 
     @Test
-    void calculateFareTestBikeWithNullOutTime() {
-        Date inTime = new Date();
-        inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
-
-        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE, false);
-
-        ticket.setInTime(inTime);
-        ticket.setOutTime(null);
-        ticket.setParkingSpot(parkingSpot);
-
-        assertThrows(Exception.class, () -> fareCalculatorService.calculateFare(ticket));
-    }
-
-    @Test
-    void calculateFareTestCarWithNullOutTime() {
-        Date inTime = new Date();
-        inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
-        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-
-        ticket.setInTime(inTime);
-        ticket.setOutTime(null);
-        ticket.setParkingSpot(parkingSpot);
-
-        assertThrows(Exception.class, () -> fareCalculatorService.calculateFare(ticket));
-    }
-
-    @Test
     public void calculateFareBikeWithFutureInTime() {
         Date inTime = new Date();
         inTime.setTime(System.currentTimeMillis() + (60 * 60 * 1000));
@@ -187,6 +160,34 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         fareCalculatorService.calculateFare(ticket);
         assertEquals((24 * Fare.BIKE_RATE_PER_HOUR), ticket.getPrice());
+    }
+
+    /*------New unit test-------*/
+    @Test
+    void calculateFareTestBikeWithNullOutTime() {
+        Date inTime = new Date();
+        inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
+
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE, false);
+
+        ticket.setInTime(inTime);
+        ticket.setOutTime(null);
+        ticket.setParkingSpot(parkingSpot);
+
+        assertThrows(Exception.class, () -> fareCalculatorService.calculateFare(ticket));
+    }
+
+    @Test
+    void calculateFareTestCarWithNullOutTime() {
+        Date inTime = new Date();
+        inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
+
+        ticket.setInTime(inTime);
+        ticket.setOutTime(null);
+        ticket.setParkingSpot(parkingSpot);
+
+        assertThrows(Exception.class, () -> fareCalculatorService.calculateFare(ticket));
     }
 
     @Test

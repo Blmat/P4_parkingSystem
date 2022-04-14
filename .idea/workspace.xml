@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="parking service exitingVehicleTest">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="Ajout de @Displayname au test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/TicketDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/TicketDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/FareCalculatorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/FareCalculatorServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/InteractiveShellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/InteractiveShellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
@@ -22,8 +19,7 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.ParkingSpotDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.ParkingSpotDAOTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.TicketDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.TicketDAOTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/TicketDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/TicketDAOTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/service/FareCalculatorServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/service/FareCalculatorServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/service/ParkingServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/service/ParkingServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +153,30 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InteractiveShellTest.helloUser">
+  <component name="RunManager" selected="JUnit.All in P4_parkingSystem">
+    <configuration name="All in P4_parkingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P4_parkingSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InteractiveShellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P4_parkingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.InteractiveShellTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InteractiveShellTest.helloUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <extension name="coverage">
@@ -174,23 +193,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InteractiveShellTest.menuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="P4_parkingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.InteractiveShellTest" />
-      <option name="METHOD_NAME" value="menuTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParkingServiceTest.getNextParkingNumberIfNotAvailableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingServiceTest.testParkingACar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <extension name="coverage">
         <pattern>
@@ -200,39 +203,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
       <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingServiceTest" />
-      <option name="METHOD_NAME" value="getNextParkingNumberIfNotAvailableTest" />
+      <option name="METHOD_NAME" value="testParkingACar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingSpotDAOTest.ParkingSpotEqualsNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingServiceTest.testParkingLotExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P4_parkingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.dao.*" />
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.dao.ParkingSpotDAOTest" />
-      <option name="METHOD_NAME" value="ParkingSpotEqualsNullTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketDAOTest.getVehicleRegNumberFromPastUsersWithNoDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="P4_parkingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.dao.TicketDAOTest" />
-      <option name="METHOD_NAME" value="getVehicleRegNumberFromPastUsersWithNoDataTest" />
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingServiceTest" />
+      <option name="METHOD_NAME" value="testParkingLotExit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in P4_parkingSystem" />
+        <item itemvalue="JUnit.InteractiveShellTest" />
         <item itemvalue="JUnit.InteractiveShellTest.helloUser" />
-        <item itemvalue="JUnit.InteractiveShellTest.menuTest" />
-        <item itemvalue="JUnit.ParkingServiceTest.getNextParkingNumberIfNotAvailableTest" />
-        <item itemvalue="JUnit.ParkingSpotDAOTest.ParkingSpotEqualsNullTest" />
-        <item itemvalue="JUnit.TicketDAOTest.getVehicleRegNumberFromPastUsersWithNoDataTest" />
+        <item itemvalue="JUnit.ParkingServiceTest.testParkingLotExit" />
+        <item itemvalue="JUnit.ParkingServiceTest.testParkingACar" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +264,7 @@
       <workItem from="1649844847399" duration="17595000" />
       <workItem from="1649871630668" duration="603000" />
       <workItem from="1649889182801" duration="3706000" />
-      <workItem from="1649936040567" duration="18137000" />
+      <workItem from="1649936040567" duration="22868000" />
     </task>
     <task id="LOCAL-00001" summary="version2">
       <created>1648741226405</created>
@@ -454,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649862312792</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Ajout de @Displayname au test">
+      <created>1649954965966</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649954965966</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +519,8 @@
     <MESSAGE value="nettoyage code+ fichier POM" />
     <MESSAGE value="parking service correction" />
     <MESSAGE value="parking service exitingVehicleTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="parking service exitingVehicleTest" />
+    <MESSAGE value="Ajout de @Displayname au test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de @Displayname au test" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

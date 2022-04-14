@@ -32,7 +32,6 @@ public class ParkingServiceTest {
     private final DecimalFormat df = new DecimalFormat("#.##");
     private final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private Connection con = dataBaseTestConfig.getConnection();
-
     private ParkingService parkingService;
     private Logger logger;
 
@@ -62,7 +61,6 @@ public class ParkingServiceTest {
     private void clearConnection() throws SQLException {
         con.close();
     }
-
     @Test
     public void processValidIncomingVehicleTest() throws Exception {
         when(inputReaderUtil.readSelection()).thenReturn(1);
@@ -85,7 +83,7 @@ public class ParkingServiceTest {
 
         parkingService.processIncomingVehicle();
 
-        assertThrows(Exception.class, () -> logger.error("Unable to process incoming vehicle"));
+        assertThrows(Exception.class, () -> logger.getName());
     }
 
     @Test
