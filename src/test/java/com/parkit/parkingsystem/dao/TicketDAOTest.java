@@ -54,7 +54,7 @@ class TicketDAOTest {
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
         Ticket ticket = new Ticket(false);
-        ticket.setInTime(new java.sql.Date(System.currentTimeMillis()));
+        ticket.setInTime(new Date(System.currentTimeMillis()));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
@@ -73,21 +73,13 @@ class TicketDAOTest {
     }
 
     @Test
-    @DisplayName("Test the method getTicket() with no data")
-    public void getTicketNullTest() throws Exception {
-        String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
-
-        assertNull(ticketDAO.getTicket("A1B2C3D4"));
-    }
-
-    @Test
     @DisplayName("Test the method getTicket()")
     public void getTicketTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
         Ticket ticket = new Ticket(false);
-        ticket.setInTime(new java.sql.Date(System.currentTimeMillis()));
+        ticket.setInTime(new Date(System.currentTimeMillis()));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
@@ -98,27 +90,11 @@ class TicketDAOTest {
     }
 
     @Test
-    @DisplayName("Test the method getVehicleRegNumberFromPastUsers() with recurrent user")
-    public void getVehicleRegNumberFromPastUsersTest() throws Exception {
+    @DisplayName("Test the method getTicket() with no data")
+    public void getTicketNullTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
-        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
-        Ticket ticket = new Ticket(true);
-        ticket.setInTime(new java.sql.Date(System.currentTimeMillis() - (26 * 60 * 60 * 1000)));
-        ticket.setOutTime(new java.sql.Date(System.currentTimeMillis() - (25 * 60 * 60 * 1000)));
-        ticket.setParkingSpot(parkingSpot);
-        ticket.setPrice(1.5);
-        ticket.setVehicleRegNumber("ABCDEF");
-        ticketDAO.saveTicket(ticket);
-
-        ticket.setInTime(new java.sql.Date(System.currentTimeMillis() - (2 * 60 * 60 * 1000)));
-        ticket.setOutTime(new java.sql.Date(System.currentTimeMillis() - (60 * 60 * 1000)));
-        ticket.setParkingSpot(parkingSpot);
-        ticket.setPrice(1.5);
-        ticket.setVehicleRegNumber("ABCDEF");
-        ticketDAO.saveTicket(ticket);
-
-        assertEquals(2, ticketDAO.getVehicleRegNumberFromPastUsers(vehicleRegNumber));
+        assertNull(ticketDAO.getTicket("A1B2C3D4"));
     }
 
     @Test
@@ -130,6 +106,30 @@ class TicketDAOTest {
     }
 
     @Test
+    @DisplayName("Test the method getVehicleRegNumberFromPastUsers() with recurrent user")
+    public void getVehicleRegNumberFromPastUsersTest() throws Exception {
+        String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
+
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
+        Ticket ticket = new Ticket(true);
+        ticket.setInTime(new Date(System.currentTimeMillis() - (26 * 60 * 60 * 1000)));
+        ticket.setOutTime(new Date(System.currentTimeMillis() - (25 * 60 * 60 * 1000)));
+        ticket.setParkingSpot(parkingSpot);
+        ticket.setPrice(1.5);
+        ticket.setVehicleRegNumber("ABCDEF");
+        ticketDAO.saveTicket(ticket);
+
+        ticket.setInTime(new Date(System.currentTimeMillis() - (2 * 60 * 60 * 1000)));
+        ticket.setOutTime(new Date(System.currentTimeMillis() - (60 * 60 * 1000)));
+        ticket.setParkingSpot(parkingSpot);
+        ticket.setPrice(1.5);
+        ticket.setVehicleRegNumber("ABCDEF");
+        ticketDAO.saveTicket(ticket);
+
+        assertEquals(2, ticketDAO.getVehicleRegNumberFromPastUsers(vehicleRegNumber));
+    }
+
+    @Test
     @DisplayName("Test the updateTicket() method")
     public void updateTicketTest() throws Exception {
 
@@ -137,7 +137,7 @@ class TicketDAOTest {
 
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
         Ticket ticket = new Ticket(false);
-        ticket.setInTime(new java.sql.Date(System.currentTimeMillis() - (3 * 60 * 60 * 1000)));
+        ticket.setInTime(new Date(System.currentTimeMillis() - (3 * 60 * 60 * 1000)));
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
@@ -145,7 +145,7 @@ class TicketDAOTest {
         ticketDAO.saveTicket(ticket);
 
         ticket.setPrice(1.5);
-        ticket.setOutTime(new java.sql.Date(System.currentTimeMillis() - (2 * 60 * 60 * 1000)));
+        ticket.setOutTime(new Date(System.currentTimeMillis() - (2 * 60 * 60 * 1000)));
 
         parkingSpot.setAvailable(ticketDAO.updateTicket(ticket));
         assertTrue(parkingSpot.isAvailable());

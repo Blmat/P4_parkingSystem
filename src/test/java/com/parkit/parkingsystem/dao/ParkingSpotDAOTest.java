@@ -24,7 +24,7 @@ class ParkingSpotDAOTest {
     }
 
     @AfterAll
-    private static void closeTest() throws IOException, ClassNotFoundException {
+    private static void closeTest() {
         dataBasePrepareService.clearDataBaseEntries();
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, true);
         parkingSpotDAO.updateParking(parkingSpot);
@@ -54,7 +54,6 @@ class ParkingSpotDAOTest {
         assertTrue(parkingSpotDAO.updateParking(parkingSpot));
 
     }
-
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with null ParkingType")
     public void updateParkingWithNoParkingTypeTest() throws IOException, ClassNotFoundException {
@@ -69,17 +68,17 @@ class ParkingSpotDAOTest {
         assertFalse(parkingSpotDAO.updateParking(parkingSpot));
     }
     @Test
+    @DisplayName("Test the method equals()")
     public void ParkingSpotEqualsTrueTest() {
         ParkingSpot parkingSpot = new ParkingSpot(0, ParkingType.BIKE, true);
         assertEquals(parkingSpot, parkingSpot);
     }
 
     @Test
+    @DisplayName("Test the method equals()")
     public void ParkingSpotEqualsFalseTest() {
         ParkingSpot parkingSpotBike = new ParkingSpot(0, ParkingType.BIKE, true);
         ParkingSpot parkingSpotCar = new ParkingSpot(1, ParkingType.CAR, true);
         assertNotEquals(parkingSpotCar, parkingSpotBike);
     }
-
-
 }
