@@ -19,17 +19,13 @@ public class Ticket {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) {this.id = id;}
 
     public ParkingSpot getParkingSpot() {
         return parkingSpot;
     }
 
-    public void setParkingSpot(ParkingSpot parkingSpot) {
-        this.parkingSpot = parkingSpot;
-    }
+    public void setParkingSpot(ParkingSpot parkingSpot) {this.parkingSpot = parkingSpot;}
 
     public String getVehicleRegNumber() {
         return vehicleRegNumber;
@@ -41,9 +37,7 @@ public class Ticket {
 
     public double getPrice() {return price;}
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+    public void setPrice(double price) {this.price = price;}
 
     public Date getInTime() {
         return inTime;

@@ -12,9 +12,9 @@ import com.parkit.parkingsystem.model.Ticket;
         }
 
         //calculate duration
-<span class="fc" id="L15">        double inHour =  ticket.getInTime().getTime();</span>
+<span class="fc" id="L15">        double inHour = ticket.getInTime().getTime();</span>
 <span class="fc" id="L16">        double outHour = ticket.getOutTime().getTime();</span>
-<span class="fc" id="L17">        double duration =  (outHour - inHour) / (1000*60*60); //60*60*1000 =1h</span>
+<span class="fc" id="L17">        double duration = (outHour - inHour) / (1000 * 60 * 60); //60*60*1000 =1h</span>
         //if duration is less than 30 min set price to 0
 <span class="fc bfc" id="L19" title="All 2 branches covered.">        if (duration &lt; 0.5) {</span>
 <span class="fc" id="L20">            ticket.setPrice(0);</span>
@@ -24,7 +24,7 @@ import com.parkit.parkingsystem.model.Ticket;
 <span class="fc" id="L24">        double reduction = 1;</span>
         //check in the ticket if user can get reduction
 <span class="fc bfc" id="L26" title="All 2 branches covered.">        if (ticket.isDiscount()) {</span>
-<span class="fc" id="L27">           reduction = Fare.DISCOUNT_FOR_REGULAR_CUSTOMER;</span>
+<span class="fc" id="L27">            reduction = Fare.DISCOUNT_FOR_REGULAR_CUSTOMER;</span>
         }
         //change the fare depending on the vehicle type
 <span class="pc bpc" id="L30" title="1 of 3 branches missed.">        switch (ticket.getParkingSpot().getParkingType()) {</span>
