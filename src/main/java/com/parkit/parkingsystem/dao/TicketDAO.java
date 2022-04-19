@@ -21,12 +21,10 @@ public class TicketDAO {
 
     public boolean saveTicket(Ticket ticket) {
         Connection con = null;
-
         try {
             con = dataBaseConfig.getConnection();
             PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-            try {
                 ps.setInt(1, ticket.getParkingSpot().getId());
                 ps.setString(2, ticket.getVehicleRegNumber());
                 ps.setDouble(3, ticket.getPrice());
@@ -35,12 +33,12 @@ public class TicketDAO {
                 ps.execute();
                 ps.close();
                 return true;
-            } finally {
-                dataBaseConfig.closeConnection(con);
-            }
         } catch (Exception ex) {
             logger.error("Error fetching next available slot", ex);
         }
+     finally {
+        dataBaseConfig.closeConnection(con);
+    }
         return false;
     }
 

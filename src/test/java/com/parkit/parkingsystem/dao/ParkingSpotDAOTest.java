@@ -24,14 +24,12 @@ class ParkingSpotDAOTest {
     @AfterAll
     private static void closeTest() {
         dataBasePrepareService.clearDataBaseEntries();
-        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, true);
-        parkingSpotDAO.updateParking(parkingSpot);
     }
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with car")
     public void getNextAvailableSlotCarTest() {
-        assertEquals(1, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
+        assertEquals(2, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
     }
 
     @Test
