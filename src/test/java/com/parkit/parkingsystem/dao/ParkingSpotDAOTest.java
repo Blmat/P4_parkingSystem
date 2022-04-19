@@ -67,6 +67,8 @@ class ParkingSpotDAOTest {
         ParkingSpot parkingSpot = new ParkingSpot(-1, ParkingType.CAR, false);
         assertFalse(parkingSpotDAO.updateParking(parkingSpot));
     }
+
+    /* Test ParkingSpot class*/
     @Test
     @DisplayName("Test the method equals()")
     public void ParkingSpotEqualsTrueTest() {

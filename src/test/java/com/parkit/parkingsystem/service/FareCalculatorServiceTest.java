@@ -2,7 +2,6 @@ package com.parkit.parkingsystem.service;
 
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.constants.ParkingType;
-import com.parkit.parkingsystem.dao.TicketDAO;
 import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import org.junit.jupiter.api.BeforeAll;
@@ -18,22 +17,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FareCalculatorServiceTest {
 
-    private static final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private static FareCalculatorService fareCalculatorService;
     private Ticket ticket;
     private final DecimalFormat df = new DecimalFormat("#.##");
 
     @BeforeAll
-    private static void setUp() {
-        TicketDAO ticketDAO = new TicketDAO();
-        ticketDAO.dataBaseConfig = dataBaseTestConfig;
-        fareCalculatorService = new FareCalculatorService();
-    }
+    private static void setUp() {fareCalculatorService = new FareCalculatorService();}
 
     @BeforeEach
-    private void setUpPerTest() {
-        ticket = new Ticket(false);
-    }
+    private void setUpPerTest() {ticket = new Ticket(false);}
 
     @Test
     @DisplayName("Test for one car for 1 h")
@@ -252,6 +244,6 @@ public class FareCalculatorServiceTest {
         ticket.setDiscount(true);
 
         fareCalculatorService.calculateFare(ticket);
-        assertEquals(df.format(24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER),df.format(ticket.getPrice()));
+        assertEquals(df.format(24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER), df.format(ticket.getPrice()));
     }
 }
