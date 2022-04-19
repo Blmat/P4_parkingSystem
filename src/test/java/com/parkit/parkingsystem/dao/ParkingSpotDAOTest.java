@@ -8,6 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingSpotDAOTest {
@@ -17,6 +19,8 @@ class ParkingSpotDAOTest {
     @BeforeEach
     private void setUpPerTest() {
         parkingSpotDAO = new ParkingSpotDAO();
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, true);
+        parkingSpotDAO.updateParking(parkingSpot);
         dataBasePrepareService = new DataBasePrepareService();
         dataBasePrepareService.clearDataBaseEntries();
     }
@@ -28,8 +32,8 @@ class ParkingSpotDAOTest {
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with car")
-    public void getNextAvailableSlotCarTest() {
-        assertEquals(2, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
+    public void getNextAvailableSlotCarTest() throws IOException, ClassNotFoundException {
+        assertEquals(1, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
     }
 
     @Test
