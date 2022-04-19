@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingSpotDAOTest {
@@ -32,13 +30,13 @@ class ParkingSpotDAOTest {
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with car")
-    public void getNextAvailableSlotCarTest() throws IOException, ClassNotFoundException {
+    public void getNextAvailableSlotCarTest() {
         assertEquals(1, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
     }
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with bike")
-    public void getNextAvailableSlotBikeTest() throws IOException, ClassNotFoundException {
+    public void getNextAvailableSlotBikeTest() {
         assertEquals(4, parkingSpotDAO.getNextAvailableSlot(ParkingType.BIKE));
     }
     @Test
@@ -49,21 +47,21 @@ class ParkingSpotDAOTest {
 
     @Test
     @DisplayName("Test the method updateParking() with car")
-    public void updateParkingTest() throws IOException, ClassNotFoundException {
+    public void updateParkingTest() {
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
         assertTrue(parkingSpotDAO.updateParking(parkingSpot));
 
     }
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with null ParkingType")
-    public void updateParkingWithNoParkingTypeTest() throws IOException, ClassNotFoundException {
+    public void updateParkingWithNoParkingTypeTest(){
         ParkingSpot parkingSpot = new ParkingSpot(1, null, false);
         assertTrue(parkingSpotDAO.updateParking(parkingSpot));
     }
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with negative Parking Slot")
-    public void updateParkingWithNegativeParkingSlotTest() throws IOException, ClassNotFoundException {
+    public void updateParkingWithNegativeParkingSlotTest(){
         ParkingSpot parkingSpot = new ParkingSpot(-1, ParkingType.CAR, false);
         assertFalse(parkingSpotDAO.updateParking(parkingSpot));
     }
