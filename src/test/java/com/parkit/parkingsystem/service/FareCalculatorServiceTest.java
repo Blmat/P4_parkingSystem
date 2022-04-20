@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.text.DecimalFormat;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,9 +18,7 @@ public class FareCalculatorServiceTest {
 
     private static FareCalculatorService fareCalculatorService;
     private Ticket ticket;
-    private final DecimalFormat df = new DecimalFormat("#.##");
-
-    @BeforeAll
+       @BeforeAll
     private static void setUp() {fareCalculatorService = new FareCalculatorService();}
 
     @BeforeEach
@@ -226,7 +223,7 @@ public class FareCalculatorServiceTest {
         ticket.setDiscount(true);
 
         fareCalculatorService.calculateFare(ticket);
-        assertEquals(df.format(24 * Fare.CAR_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER), df.format(ticket.getPrice()));
+        assertEquals((24 * Fare.CAR_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER),(ticket.getPrice()));
 
     }
 
@@ -244,6 +241,6 @@ public class FareCalculatorServiceTest {
         ticket.setDiscount(true);
 
         fareCalculatorService.calculateFare(ticket);
-        assertEquals(df.format(24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER), df.format(ticket.getPrice()));
+        assertEquals((24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER),(ticket.getPrice()));
     }
 }

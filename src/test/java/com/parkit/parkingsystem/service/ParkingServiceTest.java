@@ -58,7 +58,6 @@ public class ParkingServiceTest {
     private void clearConnection() throws SQLException {
         con.close();
     }
-
     @Test
     public void processValidIncomingVehicleTest() throws Exception {
         when(inputReaderUtil.readSelection()).thenReturn(1);
