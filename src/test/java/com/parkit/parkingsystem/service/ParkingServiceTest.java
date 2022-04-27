@@ -14,19 +14,15 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.text.DecimalFormat;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class ParkingServiceTest {
 
-    private final DecimalFormat df = new DecimalFormat("#.##");
     private final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private Connection con = dataBaseTestConfig.getConnection();
     private ParkingService parkingService;

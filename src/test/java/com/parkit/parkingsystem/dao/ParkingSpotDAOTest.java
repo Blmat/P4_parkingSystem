@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingSpotDAOTest {
@@ -18,8 +16,8 @@ class ParkingSpotDAOTest {
 
     @BeforeEach
     private void setUpPerTest() {
-        parkingSpotDAO = new ParkingSpotDAO();
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, true);
+        parkingSpotDAO = new ParkingSpotDAO();
         parkingSpotDAO.updateParking(parkingSpot);
         dataBasePrepareService = new DataBasePrepareService();
         dataBasePrepareService.clearDataBaseEntries();
@@ -32,7 +30,7 @@ class ParkingSpotDAOTest {
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with car")
-    public void getNextAvailableSlotCarTest() throws IOException, ClassNotFoundException {
+    public void getNextAvailableSlotCarTest() {
         assertEquals(1, parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR));
     }
 
@@ -41,10 +39,11 @@ class ParkingSpotDAOTest {
     public void getNextAvailableSlotBikeTest() {
         assertEquals(4, parkingSpotDAO.getNextAvailableSlot(ParkingType.BIKE));
     }
+
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with null ParkingType")
     public void getNextAvailableSlotNullParkingTypeTest() {
-        assertThrows(NullPointerException.class, () ->parkingSpotDAO.getNextAvailableSlot(null));
+        assertThrows(NullPointerException.class, () -> parkingSpotDAO.getNextAvailableSlot(null));
     }
 
     @Test
@@ -54,16 +53,17 @@ class ParkingSpotDAOTest {
         assertTrue(parkingSpotDAO.updateParking(parkingSpot));
 
     }
+
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with null ParkingType")
-    public void updateParkingWithNoParkingTypeTest(){
+    public void updateParkingWithNoParkingTypeTest() {
         ParkingSpot parkingSpot = new ParkingSpot(1, null, false);
         assertTrue(parkingSpotDAO.updateParking(parkingSpot));
     }
 
     @Test
     @DisplayName("Test the method getNextAvailableSlot() with negative Parking Slot")
-    public void updateParkingWithNegativeParkingSlotTest(){
+    public void updateParkingWithNegativeParkingSlotTest() {
         ParkingSpot parkingSpot = new ParkingSpot(-1, ParkingType.CAR, false);
         assertFalse(parkingSpotDAO.updateParking(parkingSpot));
     }

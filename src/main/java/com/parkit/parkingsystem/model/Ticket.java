@@ -35,7 +35,7 @@ public class Ticket {
         this.vehicleRegNumber = vehicleRegNumber;
     }
 
-    public double getPrice() {return price;}
+    public double getPrice() {return Math.round(price*100)/100d;}
 
     public void setPrice(double price) {this.price = price;}
 

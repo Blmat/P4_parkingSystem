@@ -18,7 +18,8 @@ public class FareCalculatorServiceTest {
 
     private static FareCalculatorService fareCalculatorService;
     private Ticket ticket;
-       @BeforeAll
+
+    @BeforeAll
     private static void setUp() {fareCalculatorService = new FareCalculatorService();}
 
     @BeforeEach
@@ -120,7 +121,11 @@ public class FareCalculatorServiceTest {
         ticket.setOutTime(outTime);
         ticket.setParkingSpot(parkingSpot);
         fareCalculatorService.calculateFare(ticket);
-        assertEquals((0.75 * Fare.CAR_RATE_PER_HOUR), ticket.getPrice());
+        double expected=Math.round(0.75 * Fare.CAR_RATE_PER_HOUR*100)/100d;
+
+        fareCalculatorService.calculateFare(ticket);
+
+        assertEquals(expected,ticket.getPrice());
     }
 
     @Test
@@ -222,8 +227,11 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         ticket.setDiscount(true);
 
+        double expected=Math.round(24 * Fare.CAR_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER*100)/100d;
+
         fareCalculatorService.calculateFare(ticket);
-        assertEquals((24 * Fare.CAR_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER),(ticket.getPrice()));
+
+        assertEquals(expected,ticket.getPrice());
 
     }
 
@@ -240,7 +248,10 @@ public class FareCalculatorServiceTest {
         ticket.setParkingSpot(parkingSpot);
         ticket.setDiscount(true);
 
+        double expected=Math.round(24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER*100)/100d;
+
         fareCalculatorService.calculateFare(ticket);
-        assertEquals((24 * Fare.BIKE_RATE_PER_HOUR * Fare.DISCOUNT_FOR_REGULAR_CUSTOMER),(ticket.getPrice()));
+
+        assertEquals(expected,ticket.getPrice());
     }
 }
