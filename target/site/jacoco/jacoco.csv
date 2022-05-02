@@ -3,7 +3,7 @@ parking-system,com.parkit.parkingsystem.service,ParkingService,3,247,2,9,1,67,2,
 parking-system,com.parkit.parkingsystem.service,InteractiveShell,3,70,0,6,1,28,1,7,1,3
 parking-system,com.parkit.parkingsystem.service,FareCalculatorService,5,81,1,10,1,19,1,7,0,2
 parking-system,com.parkit.parkingsystem.model,ParkingSpot,13,49,2,6,5,14,5,8,3,6
-parking-system,com.parkit.parkingsystem.model,Ticket,0,55,0,0,0,21,0,15,0,15
+parking-system,com.parkit.parkingsystem.model,Ticket,0,61,0,0,0,21,0,15,0,15
 parking-system,com.parkit.parkingsystem.util,InputReaderUtil,5,64,2,4,1,19,2,5,0,4
 parking-system,com.parkit.parkingsystem.dao,ParkingSpotDAO,14,93,1,3,5,24,1,5,0,4
 parking-system,com.parkit.parkingsystem.dao,TicketDAO,10,250,1,5,4,63,1,8,0,6

@@ -35,7 +35,7 @@ public class Ticket {
 <span class="fc" id="L35">        this.vehicleRegNumber = vehicleRegNumber;</span>
 <span class="fc" id="L36">    }</span>
 
-<span class="fc" id="L38">    public double getPrice() {return price;}</span>
+<span class="fc" id="L38">    public double getPrice() {return Math.round(price*100)/100d;}</span>
 
 <span class="fc" id="L40">    public void setPrice(double price) {this.price = price;}</span>
 

@@ -38,8 +38,7 @@ class TicketDAOTest {
 
     @BeforeEach
     private void setUpPerTest() throws Exception {
-        when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("ABCDEF");
-        dataBasePrepareService.clearDataBaseEntries();
+        when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("ABC-DEF");
     }
 
     @AfterEach
@@ -59,13 +58,13 @@ class TicketDAOTest {
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
         ticket.setId(1);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("ABC-DEF");
 
         assertTrue(ticketDAO.saveTicket(ticket));
     }
 
     @Test
-    @DisplayName("Test the method getNextAvailableSlot() with no data")
+    @DisplayName("Test the method saveTicket() with no data")
     public void saveTicketWithNoDataTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
         Ticket ticket = new Ticket(false);
@@ -83,7 +82,7 @@ class TicketDAOTest {
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("ABC-DEF");
         ticketDAO.saveTicket(ticket);
 
         assertNotNull(ticketDAO.getTicket(vehicleRegNumber));
@@ -116,14 +115,14 @@ class TicketDAOTest {
         ticket.setOutTime(new Date(System.currentTimeMillis() - (25 * 60 * 60 * 1000)));
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(1.5);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("ABC-DEF");
         ticketDAO.saveTicket(ticket);
 
         ticket.setInTime(new Date(System.currentTimeMillis() - (2 * 60 * 60 * 1000)));
         ticket.setOutTime(new Date(System.currentTimeMillis() - (60 * 60 * 1000)));
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(1.5);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("ABC-DEF");
         ticketDAO.saveTicket(ticket);
 
         assertEquals(2, ticketDAO.getVehicleRegNumberFromPastUsers(vehicleRegNumber));
@@ -141,7 +140,7 @@ class TicketDAOTest {
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("ABC-DEF");
         ticketDAO.saveTicket(ticket);
 
         ticket.setPrice(1.5);
@@ -163,7 +162,7 @@ class TicketDAOTest {
         ticket.setOutTime(null);
         ticket.setParkingSpot(parkingSpot);
         ticket.setPrice(0.0);
-        ticket.setVehicleRegNumber("ABCDEF");
+        ticket.setVehicleRegNumber("ABC-DEF");
         ticketDAO.saveTicket(ticket);
 
         parkingSpot.setAvailable(ticketDAO.updateTicket(ticket));

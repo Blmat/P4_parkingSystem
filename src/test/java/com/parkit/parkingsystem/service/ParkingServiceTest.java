@@ -27,6 +27,8 @@ public class ParkingServiceTest {
     private Connection con = dataBaseTestConfig.getConnection();
     private ParkingService parkingService;
     private Logger logger;
+    private Ticket ticket;
+    private ParkingSpot parkingSpot;
 
     @Mock
     private static InputReaderUtil inputReaderUtil;
@@ -34,10 +36,9 @@ public class ParkingServiceTest {
     private static ParkingSpotDAO parkingSpotDAO;
     @Mock
     private static TicketDAO ticketDAO;
-    @Mock
-    private ParkingSpot parkingSpot;
-    @Mock
-    private Ticket ticket;
+
+
+
 
 
     public ParkingServiceTest() throws SQLException, ClassNotFoundException {

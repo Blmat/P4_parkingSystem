@@ -19,7 +19,6 @@ class InputReaderUtilTest {
         inputReaderUtil = new InputReaderUtil();
     }
 
-
     @Test
     @DisplayName("Test the readSelection() method when the input is correct")
     public void InputCanBeParseToInt() {
@@ -29,15 +28,7 @@ class InputReaderUtilTest {
 
         assertEquals(1, inputReaderUtil.readSelection());
     }
-    @Test
-    @DisplayName("Test the readSelection() method when the input is incorrect")
-    public void InputCannotBeParseToInt() {
-        String data = "bababf";
-        InputStream in = new ByteArrayInputStream(data.getBytes());
-        System.setIn(in);
 
-        assertEquals(-1, inputReaderUtil.readSelection());
-    }
     @Test
     @DisplayName("Test the readSelection() method when the input is empty")
     public void InputIsEmpty() {
