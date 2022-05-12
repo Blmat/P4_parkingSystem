@@ -21,7 +21,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class ParkingDataBaseITCar {
 
-    private static final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
+    private static DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private static ParkingSpotDAO parkingSpotDAO;
     private static TicketDAO ticketDAO;
     private static DataBasePrepareService dataBasePrepareService;
@@ -37,12 +37,14 @@ public class ParkingDataBaseITCar {
         ticketDAO.dataBaseConfig = dataBaseTestConfig;
         dataBasePrepareService = new DataBasePrepareService();
     }
+
     @BeforeEach
     private void setUpPerTest() throws Exception {
         when(inputReaderUtil.readSelection()).thenReturn(1);
         when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("ABCDEF");
         dataBasePrepareService.clearDataBaseEntries();
     }
+
     @AfterAll
     private static void tearDown() {
     }
@@ -50,7 +52,7 @@ public class ParkingDataBaseITCar {
     @Test
     public void testParkingACar() {
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-        int car= parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
+        int car = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
         parkingService.processIncomingVehicle();
         //TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
 
@@ -60,7 +62,7 @@ public class ParkingDataBaseITCar {
         ParkingSpot parkingSpot = ticket.getParkingSpot();
         assertNotNull(parkingSpot);
 
-        assertFalse(parkingSpot.isAvailable());/*assertFalse pour s'assurer que la place n'est plus disponible*/
+        assertFalse(parkingSpot.isAvailable());
         assertEquals(car, parkingSpot.getId());
     }
 

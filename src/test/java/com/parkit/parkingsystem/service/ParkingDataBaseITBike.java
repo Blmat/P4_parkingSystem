@@ -59,7 +59,7 @@ public class ParkingDataBaseITBike {
         ParkingSpot parkingSpot = ticket.getParkingSpot();
         assertNotNull(parkingSpot);
 
-        assertFalse(parkingSpot.isAvailable());/*assertFalse pour s'assurer que la place n'est plus disponible*/
+        assertFalse(parkingSpot.isAvailable());
         assertEquals(bike, parkingSpot.getId());
 
     }

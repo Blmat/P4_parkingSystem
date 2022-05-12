@@ -91,7 +91,7 @@ import java.sql.Timestamp;
 
 //    Used to know if a user is already in the database
     public int getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
-<span class="fc" id="L94">        Connection con = null;</span>
+        Connection con;
 <span class="fc" id="L95">        int occurrences = 0;</span>
 
         try {

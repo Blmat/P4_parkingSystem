@@ -91,7 +91,7 @@ public class TicketDAO {
 
 //    Used to know if a user is already in the database
     public int getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
-        Connection con = null;
+        Connection con;
         int occurrences = 0;
 
         try {
