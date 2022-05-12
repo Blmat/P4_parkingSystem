@@ -4,29 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="modif decimal en Math.round sur FareCalculatorServiceTest">
+    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="suppression de Test doublons et nettoyage du code">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingDataBaseITBike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingDataBaseITCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f836a228e623abd0c11f02714b424ccda9579ac" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/TicketDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/dao/TicketDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/ParkingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parkit/parkingsystem/service/ParkingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/util/InputReaderUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/util/InputReaderUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/model/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/model/Ticket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/Ticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/Ticket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/Ticket.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/Ticket.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.parkit.parkingsystem.model/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.ParkingSpotDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.ParkingSpotDAOTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.ParkingSpotDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.ParkingSpotDAOTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.TicketDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.TicketDAOTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/TicketDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/dao/TicketDAOTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/service/ParkingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parkit/parkingsystem/service/ParkingService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/service/ParkingServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/service/ParkingServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/util/InputReaderUtilTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/parkit/parkingsystem/util/InputReaderUtilTest.class" afterDir="false" />
     </list>
@@ -41,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -168,54 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputReaderUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parking-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.util" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.util.InputReaderUtilTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InputReaderUtilTest.InputCannotBeParseToInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parking-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.util" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.util.InputReaderUtilTest" />
-      <option name="METHOD_NAME" value="InputCannotBeParseToInt" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InputReaderUtilTest.VehicleRegNumberIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parking-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.util" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.util.InputReaderUtilTest" />
-      <option name="METHOD_NAME" value="VehicleRegNumberIsNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParkingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingDataBaseITBike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
@@ -224,8 +166,55 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseITBike" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingDataBaseITCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseITCar" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingDataBaseITCar.testParkingABike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseITCar" />
+      <option name="METHOD_NAME" value="testParkingABike" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParkingDataBaseITCar.testParkingLotExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
+      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseITCar" />
+      <option name="METHOD_NAME" value="testParkingLotExit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -233,10 +222,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in parking-system" />
-        <item itemvalue="JUnit.ParkingServiceTest" />
-        <item itemvalue="JUnit.InputReaderUtilTest.VehicleRegNumberIsNull" />
-        <item itemvalue="JUnit.InputReaderUtilTest.InputCannotBeParseToInt" />
-        <item itemvalue="JUnit.InputReaderUtilTest" />
+        <item itemvalue="JUnit.ParkingDataBaseITBike" />
+        <item itemvalue="JUnit.ParkingDataBaseITCar" />
+        <item itemvalue="JUnit.ParkingDataBaseITCar.testParkingLotExit" />
+        <item itemvalue="JUnit.ParkingDataBaseITCar.testParkingABike" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +274,26 @@
       <workItem from="1651058023222" duration="3841000" />
       <workItem from="1651072548486" duration="606000" />
       <workItem from="1651480895286" duration="4514000" />
-      <workItem from="1651490893277" duration="1551000" />
+      <workItem from="1651490893277" duration="2290000" />
+      <workItem from="1651494605081" duration="484000" />
+      <workItem from="1651495710219" duration="541000" />
+      <workItem from="1651659242821" duration="208000" />
+      <workItem from="1651844163761" duration="19000" />
+      <workItem from="1651844425888" duration="6000" />
+      <workItem from="1651845593260" duration="3468000" />
+      <workItem from="1651849728413" duration="1851000" />
+      <workItem from="1652037538848" duration="149000" />
+      <workItem from="1652041352719" duration="358000" />
+      <workItem from="1652043616173" duration="77000" />
+      <workItem from="1652044663320" duration="79000" />
+      <workItem from="1652087031306" duration="1344000" />
+      <workItem from="1652127470290" duration="7000" />
+      <workItem from="1652173053895" duration="2628000" />
+      <workItem from="1652186447500" duration="225000" />
+      <workItem from="1652220456622" duration="593000" />
+      <workItem from="1652266950374" duration="2310000" />
+      <workItem from="1652343821201" duration="3628000" />
+      <workItem from="1652347983006" duration="6580000" />
     </task>
     <task id="LOCAL-00001" summary="version2">
       <created>1648741226405</created>
@@ -518,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651065807381</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="suppression de Test doublons et nettoyage du code">
+      <created>1651492596047</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1651492596047</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Classe FareCalculatorServiceTest ok100%" />
     <MESSAGE value="57%couverture jacoco" />
     <MESSAGE value="61%couverture jacoco" />
     <MESSAGE value="modif POM" />
@@ -591,7 +605,8 @@
     <MESSAGE value="ajustement code ParkinSpottest" />
     <MESSAGE value="encore du nettoyage" />
     <MESSAGE value="modif decimal en Math.round sur FareCalculatorServiceTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif decimal en Math.round sur FareCalculatorServiceTest" />
+    <MESSAGE value="suppression de Test doublons et nettoyage du code" />
+    <option name="LAST_COMMIT_MESSAGE" value="suppression de Test doublons et nettoyage du code" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

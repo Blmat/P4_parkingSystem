@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.NoSuchElementException;
 
@@ -21,7 +22,7 @@ class InputReaderUtilTest {
 
     @Test
     @DisplayName("Test the readSelection() method when the input is correct")
-    public void InputCanBeParseToInt() {
+    public void InputCanBeParseToInt() throws IOException {
         String data = "1";
         InputStream in = new ByteArrayInputStream(data.getBytes());
         System.setIn(in);

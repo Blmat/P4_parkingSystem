@@ -39,7 +39,8 @@ public class ParkingService {
                 parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark its availability as false
 
                 Date inTime = new Date();
-                Ticket ticket = new Ticket(false);
+                boolean isRecurrent = ticketDAO.getVehicleRegNumberFromPastUsers(vehicleRegNumber)>1;
+                Ticket ticket = new Ticket(isRecurrent);
                 //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
                 ticket.setId(0);
                 ticket.setParkingSpot(parkingSpot);

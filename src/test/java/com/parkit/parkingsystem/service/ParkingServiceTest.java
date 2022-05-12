@@ -37,10 +37,6 @@ public class ParkingServiceTest {
     @Mock
     private static TicketDAO ticketDAO;
 
-
-
-
-
     public ParkingServiceTest() throws SQLException, ClassNotFoundException {
     }
 
@@ -50,7 +46,6 @@ public class ParkingServiceTest {
         parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
     }
-
     @AfterEach
     private void clearConnection() throws SQLException {
         con.close();
