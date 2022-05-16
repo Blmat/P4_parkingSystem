@@ -25,19 +25,19 @@ import java.sql.Timestamp;
 <span class="fc" id="L25">            con = dataBaseConfig.getConnection();</span>
 <span class="fc" id="L26">            PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);</span>
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-<span class="fc" id="L28">                ps.setInt(1, ticket.getParkingSpot().getId());</span>
-<span class="fc" id="L29">                ps.setString(2, ticket.getVehicleRegNumber());</span>
-<span class="fc" id="L30">                ps.setDouble(3, ticket.getPrice());</span>
-<span class="fc" id="L31">                ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">                ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));</span>
-<span class="fc" id="L33">                ps.execute();</span>
-<span class="fc" id="L34">                ps.close();</span>
-<span class="fc" id="L35">                return true;</span>
+<span class="fc" id="L28">            ps.setInt(1, ticket.getParkingSpot().getId());</span>
+<span class="fc" id="L29">            ps.setString(2, ticket.getVehicleRegNumber());</span>
+<span class="fc" id="L30">            ps.setDouble(3, ticket.getPrice());</span>
+<span class="fc" id="L31">            ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));</span>
+<span class="fc" id="L33">            ps.execute();</span>
+<span class="fc" id="L34">            ps.close();</span>
+<span class="fc" id="L35">            return true;</span>
 <span class="fc" id="L36">        } catch (Exception ex) {</span>
 <span class="fc" id="L37">            logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-        }finally {
-<span class="fc" id="L39">        dataBaseConfig.closeConnection(con);</span>
-    }
+        } finally {
+<span class="fc" id="L39">            dataBaseConfig.closeConnection(con);</span>
+        }
 <span class="fc" id="L41">        return false;</span>
     }
 
@@ -89,30 +89,35 @@ import java.sql.Timestamp;
 <span class="fc" id="L89">        return false;</span>
     }
 
-//    Used to know if a user is already in the database
-    public int getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
+    //    Used to know if a user is already in the database
+    public boolean getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
         Connection con;
-<span class="fc" id="L95">        int occurrences = 0;</span>
+<span class="fc" id="L95">        boolean discount = false;</span>
+<span class="fc" id="L96">        int occurrences = 0;</span>
 
         try {
-<span class="fc" id="L98">            con = dataBaseConfig.getConnection();</span>
-<span class="fc" id="L99">            PreparedStatement ps = con.prepareStatement(DBConstants.IS_RECURRENT);</span>
+<span class="fc" id="L99">            con = dataBaseConfig.getConnection();</span>
+<span class="fc" id="L100">            PreparedStatement ps = con.prepareStatement(DBConstants.IS_RECURRENT);</span>
             try {
-<span class="fc" id="L101">                ps.setString(1, vehicleRegNumber);</span>
-<span class="fc" id="L102">                try (ResultSet rs = ps.executeQuery()) {</span>
-<span class="pc bpc" id="L103" title="1 of 2 branches missed.">                    if (rs.next()) {</span>
-<span class="fc" id="L104">                        occurrences = rs.getInt(1);</span>
+<span class="fc" id="L102">                ps.setString(1, vehicleRegNumber);</span>
+<span class="fc" id="L103">                try (ResultSet rs = ps.executeQuery()) {</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">                    if (rs.next()) {</span>
+<span class="fc" id="L105">                        occurrences = rs.getInt(1);</span>
                     }
-<span class="fc" id="L106">                    dataBaseConfig.closeResultSet(rs);</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">                    if (occurrences &gt;= 1) {</span>
+<span class="fc" id="L108">                        discount = true;</span>
+                    }
+<span class="fc" id="L110">                    dataBaseConfig.closeResultSet(rs);</span>
                 }
             } finally {
-<span class="fc" id="L109">                dataBaseConfig.closePreparedStatement(ps);</span>
-<span class="fc" id="L110">                dataBaseConfig.closeConnection(con);</span>
+<span class="fc" id="L113">                dataBaseConfig.closePreparedStatement(ps);</span>
+<span class="fc" id="L114">                dataBaseConfig.closeConnection(con);</span>
             }
-<span class="nc" id="L112">        } catch (Exception ex) {</span>
-<span class="nc" id="L113">            logger.error(&quot;Error getting past users vehicle reg number&quot;, ex);</span>
-<span class="fc" id="L114">        }</span>
-<span class="fc" id="L115">        return occurrences;</span>
+<span class="nc" id="L116">        } catch (Exception ex) {</span>
+<span class="nc" id="L117">            logger.error(&quot;Error getting past users vehicle reg number&quot;, ex);</span>
+<span class="fc" id="L118">        }</span>
+<span class="fc" id="L119">        return discount;</span>
     }
 }
+
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

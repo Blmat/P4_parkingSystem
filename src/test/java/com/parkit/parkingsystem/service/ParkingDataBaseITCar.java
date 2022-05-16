@@ -21,7 +21,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class ParkingDataBaseITCar {
 
-    private static DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
+    private static final DataBaseTestConfig dataBaseTestConfig = new DataBaseTestConfig();
     private static ParkingSpotDAO parkingSpotDAO;
     private static TicketDAO ticketDAO;
     private static DataBasePrepareService dataBasePrepareService;
@@ -49,13 +49,13 @@ public class ParkingDataBaseITCar {
     private static void tearDown() {
     }
 
+
+    //TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
     @Test
     public void testParkingACar() {
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         int car = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
         parkingService.processIncomingVehicle();
-        //TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
-
         Ticket ticket = ticketDAO.getTicket("ABCDEF");
 
         assertNotNull(ticket);
@@ -66,13 +66,14 @@ public class ParkingDataBaseITCar {
         assertEquals(car, parkingSpot.getId());
     }
 
+
+    //TODO: check that the fare generated and out time are populated correctly in the database
     @Test
     public void testParkingLotExit() throws InterruptedException {
         testParkingACar();
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         Thread.sleep(1000);
         parkingService.processExitingVehicle();
-        //TODO: check that the fare generated and out time are populated correctly in the database
 
         Ticket ticket = ticketDAO.getTicket("ABCDEF");
 

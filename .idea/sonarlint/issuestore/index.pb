@@ -23,8 +23,6 @@ m
 =src/main/java/com/parkit/parkingsystem/model/ParkingSpot.java,3\1\318986ef301ad062e600ed154b628f156483e6f7
 x
 Hsrc/test/java/com/parkit/parkingsystem/service/InteractiveShellTest.java,1\f\1f050eef38de431836dac3802c760c10c25b5117
-h
-8src/main/java/com/parkit/parkingsystem/model/Ticket.java,8\3\83ca0dc357a8c4d44de3d7afb64a8ac2f9eaf20c
 q
 Asrc/main/java/com/parkit/parkingsystem/constants/ParkingType.java,d\8\d8f01a22f362ded7d3c261a801b40e51fef59549
 j
@@ -35,3 +33,17 @@ v
 Fsrc/test/java/com/parkit/parkingsystem/service/DataBaseTestConfig.java,7\3\73c647abaa4bbc520570a4fb14dfb3eb7dee7ba2
 †
 Vsrc/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java,f\b\fbb2241be41cb3e33b3972a1e0455f171de532a4
+p
+@src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java,3\c\3c54d5d7febc45facabac5e0634ff9591a676a28
+j
+:.idea/dataSources/359f8a64-6e80-4851-9678-b689e7a8c254.xml,3\f\3f836a228e623abd0c11f02714b424ccda9579ac
+t
+Dsrc/test/java/com/parkit/parkingsystem/util/InputReaderUtilTest.java,8\1\8145e44fdd8dd15c72d534d82af977557a2db247
+q
+Asrc/main/java/com/parkit/parkingsystem/constants/DBConstants.java,9\a\9a916e3a5d00f81123923d7b960791d58a790f1b
+B
+resources/Data.sql,2\c\2c00412a6d81a0b184af68e7ec42e8a8b3a372b7
+r
+Bsrc/test/java/com/parkit/parkingsystem/dao/ParkingSpotDAOTest.java,6\b\6b7fc2a2cf62007ee1f8f21baec53dd1fb450fb9
+y
+Isrc/test/java/com/parkit/parkingsystem/service/ParkingDataBaseITBike.java,6\4\647f9c6cbfa8787547de050c19d935b7e4cf5c4f

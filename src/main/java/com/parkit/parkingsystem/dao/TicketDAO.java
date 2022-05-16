@@ -25,19 +25,19 @@ public class TicketDAO {
             con = dataBaseConfig.getConnection();
             PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-                ps.setInt(1, ticket.getParkingSpot().getId());
-                ps.setString(2, ticket.getVehicleRegNumber());
-                ps.setDouble(3, ticket.getPrice());
-                ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));
-                ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));
-                ps.execute();
-                ps.close();
-                return true;
+            ps.setInt(1, ticket.getParkingSpot().getId());
+            ps.setString(2, ticket.getVehicleRegNumber());
+            ps.setDouble(3, ticket.getPrice());
+            ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));
+            ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));
+            ps.execute();
+            ps.close();
+            return true;
         } catch (Exception ex) {
             logger.error("Error fetching next available slot", ex);
-        }finally {
-        dataBaseConfig.closeConnection(con);
-    }
+        } finally {
+            dataBaseConfig.closeConnection(con);
+        }
         return false;
     }
 
@@ -89,9 +89,10 @@ public class TicketDAO {
         return false;
     }
 
-//    Used to know if a user is already in the database
-    public int getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
+    //    Used to know if a user is already in the database
+    public boolean getVehicleRegNumberFromPastUsers(String vehicleRegNumber) {
         Connection con;
+        boolean discount = false;
         int occurrences = 0;
 
         try {
@@ -103,6 +104,9 @@ public class TicketDAO {
                     if (rs.next()) {
                         occurrences = rs.getInt(1);
                     }
+                    if (occurrences >= 1) {
+                        discount = true;
+                    }
                     dataBaseConfig.closeResultSet(rs);
                 }
             } finally {
@@ -112,6 +116,7 @@ public class TicketDAO {
         } catch (Exception ex) {
             logger.error("Error getting past users vehicle reg number", ex);
         }
-        return occurrences;
+        return discount;
     }
 }
+
