@@ -101,7 +101,7 @@ class TicketDAOTest {
     public void getVehicleRegNumberFromPastUsersWithNoDataTest() throws Exception {
         String vehicleRegNumber = inputReaderUtil.readVehicleRegistrationNumber();
 
-        assertFalse(ticketDAO.getVehicleRegNumberFromPastUsers("AA"));
+        assertFalse(ticketDAO.getVehicleRegNumberFromPastUsers("AB"));
     }
 
     @Test

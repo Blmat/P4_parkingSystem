@@ -1,9 +1,7 @@
 com\parkit\parkingsystem\dao\TicketDAOTest.class
-com\parkit\parkingsystem\service\ParkingServiceIT.class
-com\parkit\parkingsystem\service\ParkingDataBaseITCar.class
 com\parkit\parkingsystem\service\ParkingServiceTest.class
 com\parkit\parkingsystem\integration\service\DataBasePrepareService.class
-com\parkit\parkingsystem\service\ParkingDataBaseITBike.class
+com\parkit\parkingsystem\service\ParkingDataBaseIT.class
 com\parkit\parkingsystem\service\DataBaseTestConfig.class
 com\parkit\parkingsystem\service\InteractiveShellTest.class
 com\parkit\parkingsystem\dao\ParkingSpotDAOTest.class
