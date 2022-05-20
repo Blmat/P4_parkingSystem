@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="Test integration ParkingDataBaseIT">
+    <list default="true" id="fa39c6f9-bb67-4ac2-8500-9d39629f39a4" name="Changes" comment="Test integration ParkingDataBaseIT fini">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingDataBaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/parkit/parkingsystem/service/ParkingDataBaseIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.ParkingSpotDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.ParkingSpotDAOTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.parkit.parkingsystem.dao.TicketDAOTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.ParkingSpotDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.ParkingSpotDAOTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.TicketDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.parkit.parkingsystem.dao.TicketDAOTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,11 +142,19 @@
       <command value="mvn surefire report: report" />
       <command value="mvn jacoco:report" />
       <command value="mvn  surefire-report:report -DoutputDirectory=newpath" />
-      <command value="mvn clean package" />
       <command value="mvn clean" />
+      <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ParkingDataBaseIT.testParkingLotExit">
+  <component name="RunManager" selected="JUnit.All in parking-system">
+    <configuration name="All in parking-system" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="parking-system" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ParkingDataBaseIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
@@ -155,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingDataBaseIT.testParkingABike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingDataBaseIT.testParkingABike2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
@@ -165,13 +180,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
       <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseIT" />
-      <option name="METHOD_NAME" value="testParkingABike" />
+      <option name="METHOD_NAME" value="testParkingABike2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingDataBaseIT.testParkingACar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingDataBaseIT.testParkingLotExit2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
@@ -181,13 +196,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
       <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseIT" />
-      <option name="METHOD_NAME" value="testParkingACar" />
+      <option name="METHOD_NAME" value="testParkingLotExit2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParkingDataBaseIT.testParkingLotExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParkingDataBaseIT.testParkingLotExitBike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="parking-system" />
       <extension name="coverage">
         <pattern>
@@ -197,23 +212,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
       <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseIT" />
-      <option name="METHOD_NAME" value="testParkingLotExit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParkingDataBaseIT.testParkingLotExitACar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="parking-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.parkit.parkingsystem.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.parkit.parkingsystem.service" />
-      <option name="MAIN_CLASS_NAME" value="com.parkit.parkingsystem.service.ParkingDataBaseIT" />
-      <option name="METHOD_NAME" value="testParkingLotExitACar" />
+      <option name="METHOD_NAME" value="testParkingLotExitBike" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -221,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingLotExit" />
-        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingLotExitACar" />
+        <item itemvalue="JUnit.All in parking-system" />
         <item itemvalue="JUnit.ParkingDataBaseIT" />
-        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingACar" />
-        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingABike" />
+        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingABike2" />
+        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingLotExit2" />
+        <item itemvalue="JUnit.ParkingDataBaseIT.testParkingLotExitBike" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +297,7 @@
       <workItem from="1652689139513" duration="182000" />
       <workItem from="1652693242290" duration="18026000" />
       <workItem from="1652780247235" duration="1308000" />
-      <workItem from="1652871657527" duration="13615000" />
+      <workItem from="1652871657527" duration="21977000" />
     </task>
     <task id="LOCAL-00001" summary="version2">
       <created>1648741226405</created>
@@ -566,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652713575151</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Test integration ParkingDataBaseIT">
+      <created>1652979257758</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1652979257758</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +620,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="jacoco 62%" />
     <MESSAGE value="nettoyage de plusieurs classe" />
     <MESSAGE value="inputFilesTest" />
     <MESSAGE value="inputFilesTest @displayname" />
@@ -639,7 +644,8 @@
     <MESSAGE value="ajout condition ParkingService" />
     <MESSAGE value="modif TicketDAOTest + TicketDAO methode clientregulier" />
     <MESSAGE value="Test integration ParkingDataBaseIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test integration ParkingDataBaseIT" />
+    <MESSAGE value="Test integration ParkingDataBaseIT fini" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test integration ParkingDataBaseIT fini" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -649,6 +655,7 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/P4_parkingSystem$All_in_parking_system.ic" NAME="All in parking-system Coverage Results" MODIFIED="1653039760192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/P4_parkingSystem$All_in_P4_parkingSystem.ic" NAME="All in P4_parkingSystem Coverage Results" MODIFIED="1649783450793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/P4_parkingSystem$ParkingDataBaseIT_testParkingACar.ic" NAME="ParkingDataBaseIT.testParkingACar Coverage Results" MODIFIED="1652961229940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.parkit.parkingsystem.service.*</FILTER>
@@ -671,10 +678,10 @@
     <SUITE FILE_PATH="coverage/P4_parkingSystem$ParkingServiceTest.ic" NAME="ParkingServiceTest Coverage Results" MODIFIED="1652365483860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.parkit.parkingsystem.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/P4_parkingSystem$ParkingDataBaseIT.ic" NAME="ParkingDataBaseIT Coverage Results" MODIFIED="1652977605253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/P4_parkingSystem$ParkingDataBaseIT_testParkingLotExit.ic" NAME="ParkingDataBaseIT.testParkingLotExit Coverage Results" MODIFIED="1653038624191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.parkit.parkingsystem.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/P4_parkingSystem$ParkingDataBaseIT_testParkingLotExit.ic" NAME="ParkingDataBaseIT.testParkingLotExit Coverage Results" MODIFIED="1652978881994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/P4_parkingSystem$ParkingDataBaseIT.ic" NAME="ParkingDataBaseIT Coverage Results" MODIFIED="1653039648277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.parkit.parkingsystem.service.*</FILTER>
     </SUITE>
   </component>
