@@ -13,8 +13,6 @@ _
 /src/main/java/com/parkit/parkingsystem/App.java,f\4\f413b9814992e2e3525f88e4eb1a9b6234768a0e
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 q
 Asrc/main/java/com/parkit/parkingsystem/config/DataBaseConfig.java,3\d\3dc6d1078af5e430ee41185cb7fa3aded8bacc0d
 q
@@ -43,5 +41,15 @@ q
 Asrc/main/java/com/parkit/parkingsystem/constants/DBConstants.java,9\a\9a916e3a5d00f81123923d7b960791d58a790f1b
 n
 >src/main/java/com/parkit/parkingsystem/dao/ParkingSpotDAO.java,7\5\7550c37a2401ab8096eab3d6f0d62b891b9c9155
-}
-Msrc/test/java/com/parkit/parkingsystem/service/FareCalculatorServiceTest.java,a\1\a1f4bd949f452e06cbd472d53210c3dfa46ee415
+m
+=src/test/java/com/parkit/parkingsystem/dao/TicketDAOTest.java,4\c\4c604bf233ac1f175d61881fd960dde2695dfe8b
+m
+=src/main/java/com/parkit/parkingsystem/model/ParkingSpot.java,3\1\318986ef301ad062e600ed154b628f156483e6f7
+t
+Dsrc/main/java/com/parkit/parkingsystem/service/InteractiveShell.java,7\7\773c684c7c8bfd06f3cca6e47054bf5e1510573f
+r
+Bsrc/main/java/com/parkit/parkingsystem/service/ParkingService.java,3\0\3010778988e0a8c9498c5b9ccbb0c445bb7c8f19
+y
+Isrc/main/java/com/parkit/parkingsystem/service/FareCalculatorService.java,c\a\ca8d38eaa07ba4c323ae82bc7ea69a1d687a19bf
+p
+@src/main/java/com/parkit/parkingsystem/util/InputReaderUtil.java,3\c\3c54d5d7febc45facabac5e0634ff9591a676a28

@@ -215,7 +215,7 @@ public class FareCalculatorServiceTest {
     }
 
     @Test
-    @DisplayName("Test with discount for car")
+    @DisplayName("Test with discount for car with 5% discount")
     public void calculateFareCarWithRegularCustomer() {
         Date inTime = new Date();
         inTime.setTime(System.currentTimeMillis() - (24 * 60 * 60 * 1000));
@@ -236,7 +236,7 @@ public class FareCalculatorServiceTest {
     }
 
     @Test
-    @DisplayName("Test with discount for bike")
+    @DisplayName("Test with discount for bike with 5% discount")
     public void calculateFareBikeWithRegularCustomer() {
         Date inTime = new Date();
         inTime.setTime(System.currentTimeMillis() - (24 * 60 * 60 * 1000));
