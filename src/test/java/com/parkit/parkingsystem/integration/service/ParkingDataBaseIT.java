@@ -25,7 +25,7 @@ public class ParkingDataBaseIT {
     private static ParkingSpotDAO parkingSpotDAO;
     private static TicketDAO ticketDAO;
     private static DataBasePrepareService dataBasePrepareService;
-    private final String vehicleRegNumber = "ABCDEF";
+    private static final String vehicleRegNumber = "ABCDEF";
 
 
     @Mock
